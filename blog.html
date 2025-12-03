@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elaldi Blog - Pazarlama, SaaS ve Dijital Dönüşüm Hakkında Güncel Yazılar">
+    <title>Blog | Elaldi</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body class="blog-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="Elaldi Logo" width="120" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Ana Sayfa</a>
+                <a href="services.html">Hizmetler</a>
+                <a href="saas.html">SaaS Araçları</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="dashboard.html">Panelim</a>
+                <a href="contact.html" class="btn-outline">İletişim</a>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-fade-in">Elaldi Blog</h1>
+                <p class="subtitle">Pazarlama trendleri, SaaS ipuçları ve dijital dönüşüm rehberleri</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Blog ara..." id="blogSearch">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="featured-posts">
+        <div class="container">
+            <h2 class="section-title">Öne Çıkan Yazılar</h2>
+            <div class="featured-slider" id="featuredSlider">
+                <!-- Featured posts loaded via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="categories-filter">
+                <button class="category-btn active" data-category="all">Tümü</button>
+                <button class="category-btn" data-category="marketing">Pazarlama</button>
+                <button class="category-btn" data-category="saas">SaaS</button>
+                <button class="category-btn" data-category="seo">SEO</button>
+                <button class="category-btn" data-category="social">Sosyal Medya</button>
+                <button class="category-btn" data-category="analytics">Analitik</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid">
+        <div class="container">
+            <div class="posts-container" id="postsContainer">
+                <!-- Blog posts loaded via JS from blog.json -->
+            </div>
+            <div class="pagination">
+                <button class="prev-btn" disabled>← Önceki</button>
+                <span class="page-info">Sayfa 1</span>
+                <button class="next-btn">Sonraki →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Bültenimize Abone Olun</h2>
+                <p>Haftalık pazarlama ipuçları ve güncellemeleri alın</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="E-posta adresiniz" required>
+                    <button type="submit" class="btn-primary">Abone Ol</button>
+                </form>
+                <p class="privacy-note">Gizliliğinize saygı duyuyoruz. Abonelikten istediğiniz zaman çıkabilirsiniz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../images/logo.png" alt="Logo" class="footer-logo">
+                    <p>Pazarlama danışmanlığı, mikro hizmetler ve SaaS çözümleri</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kategoriler</h4>
+                    <a href="blog.html?category=marketing">Pazarlama</a>
+                    <a href="blog.html?category=saas">SaaS</a>
+                    <a href="blog.html?category=seo">SEO</a>
+                    <a href="blog.html?category=social">Sosyal Medya</a>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <p>📧 huseyinelald1@icloud.com</p>
+                    <p>📱 +90 542 123 9770</p>
+                    <p>📷 @huseyinelaldi7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Elaldi. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Blog specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load blog posts from JSON
+            fetch('../data/blog.json')
+                .then(response => response.json())
+                .then(data => {
+                    displayBlogPosts(data.posts);
+                    setupFilters(data.posts);
+                });
+
+            // Search functionality
+            document.getElementById('blogSearch').addEventListener('input', function(e) {
+                filterPosts(e.target.value);
+            });
+        });
+
+        function displayBlogPosts(posts) {
+            const container = document.getElementById('postsContainer');
+            container.innerHTML = posts.map(post => `
+                <article class="blog-post" data-category="${post.category}">
+                    <div class="post-image">
+                        <img src="../${post.image}" alt="${post.title}">
+                        <span class="post-category">${post.category}</span>
+                    </div>
+                    <div class="post-content">
+                        <h3><a href="blog-post.html?id=${post.id}">${post.title}</a></h3>
+                        <p class="post-excerpt">${post.excerpt}</p>
+                        <div class="post-meta">
+                            <span class="post-date">${post.date}</span>
+                            <span class="read-time">${post.readTime} dakika okuma</span>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function setupFilters(posts) {
+            const filterButtons = document.querySelectorAll('.category-btn');
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.dataset.category;
+                    filterByCategory(category, posts);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

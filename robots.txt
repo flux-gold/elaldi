@@ -1,0 +1,59 @@
+# ============================================
+# Elaldi - Robots.txt
+# https://flux-gold.github.io/elaldi/
+# ============================================
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /payment/checkout
+Disallow: /payment/cancel
+Disallow: /api/
+Disallow: /private/
+
+# Crawl-delay: 10
+
+# Google AdsBot
+User-agent: AdsBot-Google
+Allow: /
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /*.gif$
+
+# Bing Bot
+User-agent: bingbot
+Allow: /
+Crawl-delay: 5
+
+# Yandex Bot
+User-agent: YandexBot
+Allow: /
+Clean-param: ref /blog/
+
+# Block AI Crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Applebot
+Allow: /
+
+# SEO Sitemap
+Sitemap: https://flux-gold.github.io/elaldi/sitemap.xml
+
+# Human.txt
+# https://flux-gold.github.io/elaldi/humans.txt
+
+# Security.txt
+# https://flux-gold.github.io/elaldi/.well-known/security.txt

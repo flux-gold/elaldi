@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ödeme İptal Edildi - Elaldi">
+    <title>Ödeme İptal | Elaldi</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="icon" href="../images/favicon.ico">
+    <style>
+        .cancel-page {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .cancel-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .cancel-icon {
+            font-size: 80px;
+            color: #f44336;
+            margin-bottom: 20px;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .cancel-reasons {
+            background: #fff5f5;
+            border: 1px solid #ffcdd2;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .reason-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .reason-item:hover {
+            background: #ffebee;
+        }
+
+        .reason-item input {
+            margin-right: 10px;
+        }
+
+        .reason-text {
+            font-size: 14px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .btn-primary {
+            flex: 1;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-secondary {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .support-contact {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 480px) {
+            .cancel-container {
+                padding: 30px 20px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="cancel-page">
+    <div class="cancel-container">
+        <div class="cancel-icon">❌</div>
+        <h1>Ödeme İptal Edildi</h1>
+        <p>Ödemeniz tamamlanamadı. Lütfen tekrar deneyin veya destek ekibimizle iletişime geçin.</p>
+        
+        <div class="cancel-reasons">
+            <h3 style="margin-top: 0; color: #f44336;">Neden iptal ettiniz? (Opsiyonel)</h3>
+            
+            <label class="reason-item">
+                <input type="radio" name="cancelReason" value="price">
+                <span class="reason-text">Fiyat benim için uygun değil</span>
+            </label>
+            
+            <label class="reason-item">
+                <input type="radio" name="cancelReason" value="features">
+                <span class="reason-text">İhtiyacım olan özellikler eksik</span>
+            </label>
+            
+            <label class="reason-item">
+                <input type="radio" name="cancelReason" value="payment">
+                <span class="reason-text">Ödeme yönteminde sorun yaşadım</span>
+            </label>
+            
+            <label class="reason-item">
+                <input type="radio" name="cancelReason" value="time">
+                <span class="reason-text">Şu an için zamanım yok</span>
+            </label>
+            
+            <label class="reason-item">
+                <input type="radio" name="cancelReason" value="other">
+                <span class="reason-text">Diğer (açıklamak için tıklayın)</span>
+            </label>
+            
+            <textarea id="otherReason" placeholder="Diğer nedeninizi yazın..." 
+                     style="width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ddd; border-radius: 5px; display: none;"></textarea>
+        </div>
+        
+        <div class="action-buttons">
+            <a href="../payment/checkout.html" class="btn-primary">
+                <span>🔄</span> Tekrar Dene
+            </a>
+            <a href="../pages/saas.html" class="btn-secondary">
+                <span>⬅️</span> Geri Dön
+            </a>
+        </div>
+        
+        <div class="support-contact">
+            <p><strong>Yardıma mı ihtiyacınız var?</strong></p>
+            <p>📧 huseyinelald1@icloud.com</p>
+            <p>📱 +90 542 123 9770</p>
+            <p>⏰ Çalışma saatleri: Hafta içi 09:00 - 18:00</p>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 12px; color: #666;">
+            <strong>Not:</strong> Ödemeniz işlenmedi, herhangi bir ücret kesilmedi.
+        </p>
+    </div>
+
+    <script>
+        // Handle cancel reasons
+        document.addEventListener('DOMContentLoaded', function() {
+            const reasonRadios = document.querySelectorAll('input[name="cancelReason"]');
+            const otherTextarea = document.getElementById('otherReason');
+            
+            reasonRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'other') {
+                        otherTextarea.style.display = 'block';
+                        otherTextarea.focus();
+                    } else {
+                        otherTextarea.style.display = 'none';
+                    }
+                    
+                    // Send feedback (in production, this would be an API call)
+                    sendCancelFeedback(this.value);
+                });
+            });
+            
+            // Optional: Send feedback on page unload
+            window.addEventListener('beforeunload', function() {
+                const selectedReason = document.querySelector('input[name="cancelReason"]:checked');
+                if (selectedReason) {
+                    sendCancelFeedback(selectedReason.value);
+                }
+            });
+        });
+        
+        function sendCancelFeedback(reason) {
+            // In production, send to analytics/CRM
+            console.log('Cancel reason:', reason);
+            
+            const otherText = document.getElementById('otherReason').value;
+            if (reason === 'other' && otherText) {
+                console.log('Other reason:', otherText);
+            }
+            
+            // Example: Send to Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'payment_cancel', {
+                    'reason': reason,
+                    'value': 0
+                });
+            }
+        }
+    </script>
+</body>
+</html>

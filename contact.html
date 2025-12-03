@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Elaldi Pazarlama Danışmanlığı</title>
+    <meta name="description" content="Elaldi Pazarlama Danışmanlığı ile iletişime geçin. WhatsApp, e-posta veya telefon ile bize ulaşın.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="İletişim - Elaldi Pazarlama Danışmanlığı">
+    <meta property="og:description" content="Elaldi Pazarlama Danışmanlığı ile iletişime geçin. WhatsApp, e-posta veya telefon ile bize ulaşın.">
+    <meta property="og:url" content="https://flux-gold.github.io/elaldi/contact.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://flux-gold.github.io/elaldi/contact.html">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <span class="logo-text">Elaldi</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Ana Sayfa</a></li>
+                    <li><a href="services.html">Hizmetler</a></li>
+                    <li><a href="saas.html">SaaS Araçları</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">İletişim</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-outline" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline">Giriş Yap</a>
+                    <div class="mobile-toggle" id="mobile-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="contact-hero-title">İletişime Geçin</h1>
+                <p class="contact-hero-subtitle">
+                    Pazarlama danışmanlığı, mikro hizmetler veya SaaS çözümleri hakkında sorularınız mı var? 
+                    Size yardımcı olmaktan mutluluk duyarız.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="contact-form-header">
+                        <h2>Mesaj Gönderin</h2>
+                        <p>24 saat içinde dönüş yapıyoruz</p>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Ad Soyad *</label>
+                                <input type="text" id="name" name="name" required placeholder="Adınız ve soyadınız">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Şirket</label>
+                                <input type="text" id="company" name="company" placeholder="Şirket adı (isteğe bağlı)">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-posta *</label>
+                                <input type="email" id="email" name="email" required placeholder="ornek@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+90 (___) ___ __ __">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Konu *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Konu seçiniz</option>
+                                <option value="pazarlama-danismanligi">Pazarlama Danışmanlığı</option>
+                                <option value="mikro-hizmetler">Mikro Hizmetler</option>
+                                <option value="saas-planlari">SaaS Planları</option>
+                                <option value="fatura-sorunu">Fatura Sorunu</option>
+                                <option value="teknik-destek">Teknik Destek</option>
+                                <option value="genel-soru">Genel Soru</option>
+                                <option value="is-birligi">İş Birliği</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mesajınız *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Mesajınızı buraya yazın..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">
+                                <a href="privacy.html" target="_blank">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum *
+                            </label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">
+                                E-posta bültenine abone olmak istiyorum (haftada 1 e-posta)
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large btn-block">
+                            <i class="fas fa-paper-plane"></i> Mesajı Gönder
+                        </button>
+                        
+                        <p class="form-note">
+                            * İşaretli alanlar zorunludur. E-posta adresiniz gizli tutulacaktır.
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <!-- Quick Contact -->
+                    <div class="contact-info-card">
+                        <h3>Hızlı İletişim</h3>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefon</h4>
+                                <a href="tel:+905421239770">+90 542 123 9770</a>
+                                <p class="contact-note">Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>E-posta</h4>
+                                <a href="mailto:huseyinelald1@icloud.com">huseyinelald1@icloud.com</a>
+                                <p class="contact-note">24 saat içinde yanıtlanır</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/905421239770" target="_blank">+90 542 123 9770</a>
+                                <p class="contact-note">Anında yanıt</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="social-card">
+                        <h3>Sosyal Medya</h3>
+                        <p>Bizi sosyal medyadan takip edin</p>
+                        
+                        <div class="social-links-large">
+                            <a href="https://instagram.com/huseyinelaldi7" target="_blank" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://twitter.com/elaldi" target="_blank" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://linkedin.com/company/elaldi" target="_blank" class="social-link linkedin">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://facebook.com/elaldi" target="_blank" class="social-link facebook">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ -->
+                    <div class="faq-card">
+                        <h3>Sık Sorulan Sorular</h3>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                Ödeme onayı ne kadar sürer?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>EFT/Havale ödemeleri 1-2 iş günü içinde Admin (Hüseyin) tarafından kontrol edilir ve onaylanır.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                Fatura nasıl alabilirim?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Ödeme onaylandıktan sonra fatura e-posta adresinize otomatik olarak gönderilir.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                İade politikası nedir?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Dijital hizmetlerde iade yapılmamaktadır. Abonelikler 7 gün içinde iptal edilebilir.</p>
+                            </div>
+                        </div>
+                        
+                        <a href="faq.html" class="btn btn-outline btn-block">Tüm SSS'leri Gör</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Location -->
+    <section class="location-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ofisimiz</h2>
+                <p class="section-subtitle">Çevrimiçi hizmet veriyoruz, ancak bize ulaşmak için her zaman buradayız</p>
+            </div>
+            
+            <div class="location-grid">
+                <!-- Virtual Office Info -->
+                <div class="location-info">
+                    <div class="location-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Sanal Ofis</h3>
+                        <p>Çevrimiçi hizmet modelimiz sayesinde Türkiye'nin her yerinden bize ulaşabilirsiniz.</p>
+                        
+                        <div class="location-details">
+                            <div class="location-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Çalışma Saatleri</h4>
+                                    <p>Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                                    <p>Pazar: Kapalı</p>
+                                </div>
+                            </div>
+                            
+                            <div class="location-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <h4>Randevu</h4>
+                                    <p>Online görüşme için WhatsApp'tan randevu alabilirsiniz.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="location-item">
+                                <i class="fas fa-headset"></i>
+                                <div>
+                                    <h4>Destek</h4>
+                                    <p>7/24 WhatsApp destek hattımızdan bize ulaşabilirsiniz.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map Placeholder -->
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <h3>Çevrimiçi Hizmet</h3>
+                            <p>Tüm Türkiye'ye hizmet veriyoruz</p>
+                        </div>
+                        <div class="map-image">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Hemen Başlayın!</h2>
+                <p>Profesyonel pazarlama çözümlerimizle işinizi bir üst seviyeye taşıyın.</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://wa.me/905421239770" target="_blank" class="btn btn-primary btn-large">
+                        <i class="fab fa-whatsapp"></i> WhatsApp'tan Yazın
+                    </a>
+                    <a href="tel:+905421239770" class="btn btn-outline btn-large">
+                        <i class="fas fa-phone-alt"></i> Hemen Ara
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">Elaldi</h3>
+                    <p class="footer-description">
+                        Pazarlama danışmanlığı, mikro hizmetler ve SaaS çözümlerinde lider platform.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/huseyinelaldi7" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/905421239770" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:huseyinelald1@icloud.com" aria-label="E-posta">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Ana Sayfa</a></li>
+                        <li><a href="services.html">Hizmetler</a></li>
+                        <li><a href="saas.html">SaaS Araçları</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Hizmetler</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#seo">SEO Analiz</a></li>
+                        <li><a href="services.html#social-media">Sosyal Medya Stratejisi</a></li>
+                        <li><a href="services.html#google-ads">Google Ads Optimizasyon</a></li>
+                        <li><a href="saas.html#starter">Starter Plan</a></li>
+                        <li><a href="saas.html#professional">Professional Plan</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">İletişim</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+905421239770">+90 542 123 9770</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:huseyinelald1@icloud.com">huseyinelald1@icloud.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/905421239770" target="_blank">WhatsApp</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://instagram.com/huseyinelaldi7" target="_blank">@huseyinelaldi7</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Elaldi. Tüm hakları saklıdır.</p>
+                <p>
+                    <a href="privacy.html">Gizlilik Politikası</a> | 
+                    <a href="terms.html">Kullanım Şartları</a> | 
+                    <a href="cookies.html">Çerez Politikası</a>
+                </p>
+                <p>Ödemeler: EFT/Havale - Onay Admin (Hüseyin) tarafından yapılacaktır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/905421239770" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">WhatsApp'tan Yaz</span>
+    </a>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-success">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Mesajınız Gönderildi!</h2>
+                <p>Teşekkür ederiz. En kısa sürede size dönüş yapacağız.</p>
+                <button class="btn btn-primary" id="close-success-modal">Tamam</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+    
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .contact-hero-title {
+            font-size: var(--text-4xl);
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+        }
+        
+        .contact-hero-subtitle {
+            font-size: var(--text-xl);
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .contact-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--bg-light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+        }
+        
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .contact-form-container {
+            background: var(--bg-white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-form-header {
+            margin-bottom: var(--spacing-2xl);
+            text-align: center;
+        }
+        
+        .contact-form-header h2 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--dark-color);
+        }
+        
+        .contact-form-header p {
+            color: var(--text-light);
+        }
+        
+        .contact-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-form .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: var(--text-base);
+            transition: var(--transition-fast);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+        
+        .form-note {
+            font-size: var(--text-sm);
+            color: var(--text-light);
+            margin-top: var(--spacing-md);
+            text-align: center;
+        }
+        
+        .contact-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+        }
+        
+        .contact-info-card,
+        .social-card,
+        .faq-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-xl);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .contact-method:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: var(--text-xl);
+        }
+        
+        .contact-details h4 {
+            margin-bottom: var(--spacing-xs);
+            font-size: var(--text-lg);
+        }
+        
+        .contact-details a {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: block;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .contact-details a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .contact-note {
+            font-size: var(--text-sm);
+            color: var(--text-light);
+            margin: 0;
+        }
+        
+        .social-links-large {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            transition: var(--transition-fast);
+        }
+        
+        .social-link.instagram { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
+        .social-link.twitter { background: #1DA1F2; }
+        .social-link.linkedin { background: #0077B5; }
+        .social-link.facebook { background: #1877F2; }
+        
+        .social-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .faq-item {
+            margin-bottom: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: var(--spacing-md);
+            background: var(--bg-light);
+            border: none;
+            text-align: left;
+            font-weight: 600;
+            color: var(--dark-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-fast);
+        }
+        
+        .faq-question:hover {
+            background: var(--border-color);
+        }
+        
+        .faq-question i {
+            transition: transform var(--transition-fast);
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 var(--spacing-md);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-fast);
+        }
+        
+        .faq-answer.show {
+            padding: var(--spacing-md);
+            max-height: 200px;
+        }
+        
+        .location-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--bg-white);
+        }
+        
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        @media (max-width: 992px) {
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .location-card {
+            background: var(--bg-light);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            height: 100%;
+        }
+        
+        .location-card h3 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            color: var(--primary-color);
+        }
+        
+        .location-details {
+            margin-top: var(--spacing-xl);
+        }
+        
+        .location-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .location-item i {
+            color: var(--primary-color);
+            font-size: var(--text-xl);
+            margin-top: 2px;
+        }
+        
+        .location-item h4 {
+            margin-bottom: var(--spacing-xs);
+            font-size: var(--text-lg);
+        }
+        
+        .map-container {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .map-placeholder {
+            position: relative;
+            height: 100%;
+            min-height: 400px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--spacing-xl);
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            text-align: center;
+            z-index: 2;
+        }
+        
+        .map-image {
+            font-size: 120px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .contact-cta {
+            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .contact-cta h2 {
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .contact-cta p {
+            font-size: var(--text-xl);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-xl);
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: var(--shadow-xl);
+            z-index: 1000;
+            transition: var(--transition-fast);
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-2xl);
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            background: var(--dark-color);
+            color: var(--white);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-fast);
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-success {
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--success-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-xl);
+            font-size: 40px;
+            color: var(--white);
+        }
+        
+        .modal-success h2 {
+            margin-bottom: var(--spacing-md);
+            color: var(--success-color);
+        }
+        
+        .modal-success p {
+            margin-bottom: var(--spacing-xl);
+            color: var(--text-light);
+        }
+    </style>
+</body>
+</html>

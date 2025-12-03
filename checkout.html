@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme - Elaldi Pazarlama Danışmanlığı</title>
+    <meta name="description" content="Elaldi'de güvenli ödeme. EFT/Havale, kredi kartı veya QR kod ile ödeme yapın.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ödeme - Elaldi Pazarlama Danışmanlığı">
+    <meta property="og:description" content="Elaldi'de güvenli ödeme. EFT/Havale, kredi kartı veya QR kod ile ödeme yapın.">
+    <meta property="og:url" content="https://flux-gold.github.io/elaldi/payment/checkout.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://flux-gold.github.io/elaldi/payment/checkout.html">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header checkout-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <span class="logo-text">Elaldi</span>
+                </a>
+                
+                <div class="checkout-progress">
+                    <div class="progress-step active">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Sepet</span>
+                    </div>
+                    <div class="progress-step active">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Bilgiler</span>
+                    </div>
+                    <div class="progress-step active">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Ödeme</span>
+                    </div>
+                    <div class="progress-step">
+                        <span class="step-number">4</span>
+                        <span class="step-label">Onay</span>
+                    </div>
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="secure-badge">
+                        <i class="fas fa-lock"></i>
+                        <span>Güvenli Ödeme</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="checkout-main">
+        <div class="container">
+            <div class="checkout-grid">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <div class="summary-header">
+                        <h2><i class="fas fa-shopping-cart"></i> Sipariş Özeti</h2>
+                        <a href="../index.html" class="btn btn-outline btn-small">
+                            <i class="fas fa-arrow-left"></i> Alışverişe Devam Et
+                        </a>
+                    </div>
+                    
+                    <!-- Cart Items -->
+                    <div class="cart-items" id="cart-items-container">
+                        <!-- Cart items will be loaded here by JavaScript -->
+                    </div>
+                    
+                    <!-- Order Totals -->
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Ara Toplam:</span>
+                            <span id="subtotal">₺0.00</span>
+                        </div>
+                        
+                        <div class="total-row discount-row">
+                            <span>İndirim:</span>
+                            <span id="discount">-₺0.00</span>
+                        </div>
+                        
+                        <div class="total-row">
+                            <span>KDV (%20):</span>
+                            <span id="tax">₺0.00</span>
+                        </div>
+                        
+                        <div class="total-row grand-total">
+                            <span>Toplam:</span>
+                            <span id="grand-total">₺0.00</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Discount Code -->
+                    <div class="discount-section">
+                        <div class="discount-input">
+                            <input type="text" id="discount-code" placeholder="İndirim kodu">
+                            <button class="btn btn-primary" id="apply-discount">Uygula</button>
+                        </div>
+                        <div class="discount-message" id="discount-message"></div>
+                    </div>
+                    
+                    <!-- Security Badges -->
+                    <div class="security-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>SSL Güvenli</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-lock"></i>
+                            <span>Şifrelenmiş</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Gizlilik</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Checkout Form -->
+                <div class="checkout-form-container">
+                    <div class="form-header">
+                        <h1>Ödeme Bilgileri</h1>
+                        <p>Lütfen ödeme bilgilerinizi giriniz</p>
+                    </div>
+                    
+                    <form id="checkout-form" class="checkout-form">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Kişisel Bilgiler</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">Ad *</label>
+                                    <input type="text" id="first-name" name="first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Soyad *</label>
+                                    <input type="text" id="last-name" name="last-name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-posta Adresi *</label>
+                                <input type="email" id="email" name="email" required>
+                                <small>Sipariş bilgileri bu adrese gönderilecektir.</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefon Numarası *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Company Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-building"></i> Şirket Bilgileri (İsteğe Bağlı)</h3>
+                            
+                            <div class="form-group">
+                                <label for="company">Şirket Adı</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tax-number">Vergi Numarası</label>
+                                <input type="text" id="tax-number" name="tax-number">
+                                <small>Fatura için gereklidir.</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Invoice Address -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-file-invoice"></i> Fatura Adresi</h3>
+                            
+                            <div class="form-group">
+                                <label for="address">Adres *</label>
+                                <textarea id="address" name="address" rows="3" required></textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">Şehir *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postal-code">Posta Kodu</label>
+                                    <input type="text" id="postal-code" name="postal-code">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="need-invoice" name="need-invoice">
+                                <label for="need-invoice">Fatura gerekiyor</label>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment Method -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-credit-card"></i> Ödeme Yöntemi</h3>
+                            
+                            <div class="payment-methods">
+                                <div class="payment-method-option">
+                                    <input type="radio" id="payment-eft" name="payment-method" value="eft" checked>
+                                    <label for="payment-eft">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <div class="payment-info">
+                                            <h4>EFT / Havale</h4>
+                                            <p>Bankalar arası transfer</p>
+                                            <small>1-2 iş günü onay süresi</small>
+                                        </div>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-method-option">
+                                    <input type="radio" id="payment-card" name="payment-method" value="card">
+                                    <label for="payment-card">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <div class="payment-info">
+                                            <h4>Kredi Kartı</h4>
+                                            <p>Online ödeme</p>
+                                            <small>Anlık onay</small>
+                                        </div>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-method-option">
+                                    <input type="radio" id="payment-qr" name="payment-method" value="qr">
+                                    <label for="payment-qr">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-qrcode"></i>
+                                        </div>
+                                        <div class="payment-info">
+                                            <h4>QR Kod</h4>
+                                            <p>Mobil ödeme</p>
+                                            <small>Anlık onay</small>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Details -->
+                            <div class="payment-details" id="payment-details">
+                                <!-- Payment details will be loaded here based on selection -->
+                                <div class="eft-details">
+                                    <h4>EFT / Havale Talimatları</h4>
+                                    <p>Lütfen aşağıdaki hesap bilgilerine ödeme yapınız:</p>
+                                    
+                                    <div class="bank-accounts">
+                                        <div class="bank-account">
+                                            <h5>Ziraat Bankası</h5>
+                                            <p><strong>Hesap Adı:</strong> HÜSEYİN ELALDİ PAZARLAMA DANIŞMANLIK</p>
+                                            <p><strong>IBAN:</strong> <code>TR00 0000 0000 0000 0000 0000 00</code></p>
+                                            <p><strong>Hesap No:</strong> 000-0000000-0000</p>
+                                            <p><strong>Şube:</strong> Merkez Şube (0000)</p>
+                                        </div>
+                                        
+                                        <div class="bank-account">
+                                            <h5>İş Bankası</h5>
+                                            <p><strong>Hesap Adı:</strong> HÜSEYİN ELALDİ PAZARLAMA DANIŞMANLIK</p>
+                                            <p><strong>IBAN:</strong> <code>TR00 0000 0000 0000 0000 0000 00</code></p>
+                                            <p><strong>Hesap No:</strong> 0000-0000000</p>
+                                            <p><strong>Şube:</strong> Merkez Şube (0000)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="payment-instructions">
+                                        <h5>Önemli Notlar:</h5>
+                                        <ul>
+                                            <li>Ödeme açıklamasına <strong>"ELALDI-<span id="order-ref">REF123</span>"</strong> yazmayı unutmayın.</li>
+                                            <li>EFT/Havale işlemi tamamlandıktan sonra WhatsApp +90 542 123 9770 numaradan bilgi veriniz.</li>
+                                            <li>Ödeme onayı Admin (Hüseyin Elaldi) tarafından yapılacaktır.</li>
+                                            <li>Onay süresi 1-2 iş günüdür.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Terms & Conditions -->
+                        <div class="form-section">
+                            <div class="terms-container">
+                                <div class="terms-content">
+                                    <h4>Önemli Bilgilendirme</h4>
+                                    <ul>
+                                        <li>EFT/Havale ile yapılan ödemelerde onay Admin (Hüseyin Elaldi) tarafından manuel olarak yapılır.</li>
+                                        <li>Kredi kartı ile yapılan ödemeler anında onaylanır.</li>
+                                        <li>Dijital hizmetlerde iade yapılmamaktadır.</li>
+                                        <li>Abonelikler 7 gün içinde iptal edilebilir.</li>
+                                        <li>Ödeme işleminiz 256-bit SSL şifreleme ile korunmaktadır.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">
+                                        <a href="../pages/terms.html" target="_blank">Kullanım Şartları</a>'nı ve 
+                                        <a href="../pages/privacy.html" target="_blank">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum *
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="marketing" name="marketing">
+                                    <label for="marketing">
+                                        Kampanya ve duyurulardan haberdar olmak istiyorum (isteğe bağlı)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large btn-block" id="submit-payment">
+                                <i class="fas fa-lock"></i> Ödemeyi Tamamla
+                            </button>
+                            <p class="security-note">
+                                <i class="fas fa-shield-alt"></i> Ödeme bilgileriniz güvenli bir şekilde işlenmektedir.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="checkout-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-headset"></i> Destek</h4>
+                    <p>Ödeme ile ilgili sorularınız için:</p>
+                    <p><strong>WhatsApp:</strong> +90 542 123 9770</p>
+                    <p><strong>E-posta:</strong> huseyinelald1@icloud.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-clock"></i> Çalışma Saatleri</h4>
+                    <p>Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                    <p>Pazar: Kapalı</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-alt"></i> Güvenlik</h4>
+                    <p>256-bit SSL Şifreleme</p>
+                    <p>PCI DSS Uyumlu</p>
+                    <p>Veri Gizliliği</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elaldi. Tüm hakları saklıdır.</p>
+                <p>Ödemeler: EFT/Havale - Onay Admin (Hüseyin) tarafından yapılacaktır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3>Ödeme İşleniyor</h3>
+            <p>Lütfen bekleyin...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/payment.js"></script>
+    <script>
+        // Checkout page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Generate order reference
+            const orderRef = 'ELALDI-' + Date.now().toString().slice(-8);
+            document.getElementById('order-ref').textContent = orderRef;
+            
+            // Load cart items
+            loadCartItems();
+            
+            // Update totals
+            updateTotals();
+            
+            // Payment method change
+            document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    updatePaymentDetails(this.value);
+                });
+            });
+            
+            // Apply discount
+            document.getElementById('apply-discount').addEventListener('click', function() {
+                const code = document.getElementById('discount-code').value;
+                if (code) {
+                    applyDiscountCode(code);
+                }
+            });
+            
+            // Form submission
+            document.getElementById('checkout-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                processPayment();
+            });
+            
+            // Initialize payment details
+            updatePaymentDetails('eft');
+        });
+        
+        function loadCartItems() {
+            const cart = JSON.parse(localStorage.getItem('elaldi_cart')) || [];
+            const selectedPlan = JSON.parse(localStorage.getItem('selected_plan')) || null;
+            const container = document.getElementById('cart-items-container');
+            
+            if (cart.length === 0 && !selectedPlan) {
+                container.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Sepetiniz boş</p>
+                        <a href="../index.html" class="btn btn-primary">Alışverişe Başla</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '';
+            
+            // Cart items
+            cart.forEach(item => {
+                const price = parsePrice(item.price);
+                const total = price * (item.quantity || 1);
+                
+                html += `
+                <div class="cart-item-summary">
+                    <div class="item-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.price} × ${item.quantity || 1}</p>
+                    </div>
+                    <div class="item-total">
+                        ${formatCurrency(total)}
+                    </div>
+                </div>
+                `;
+            });
+            
+            // Plan
+            if (selectedPlan) {
+                const price = parsePrice(selectedPlan.price);
+                
+                html += `
+                <div class="cart-item-summary">
+                    <div class="item-info">
+                        <h4>${selectedPlan.name} Planı</h4>
+                        <p>Abonelik</p>
+                    </div>
+                    <div class="item-total">
+                        ${selectedPlan.price}/ay
+                    </div>
+                </div>
+                `;
+            }
+            
+            container.innerHTML = html;
+        }
+        
+        function updateTotals() {
+            const cart = JSON.parse(localStorage.getItem('elaldi_cart')) || [];
+            const selectedPlan = JSON.parse(localStorage.getItem('selected_plan')) || null;
+            const discountCode = JSON.parse(localStorage.getItem('discount_code')) || null;
+            
+            let subtotal = 0;
+            
+            // Cart items
+            cart.forEach(item => {
+                const price = parsePrice(item.price);
+                subtotal += price * (item.quantity || 1);
+            });
+            
+            // Plan
+            if (selectedPlan) {
+                subtotal += parsePrice(selectedPlan.price);
+            }
+            
+            // Apply discount
+            let discount = 0;
+            let discountAmount = 0;
+            
+            if (discountCode) {
+                if (discountCode.type === 'percentage') {
+                    discountAmount = subtotal * (discountCode.value / 100);
+                } else if (discountCode.type === 'fixed') {
+                    discountAmount = discountCode.amount;
+                }
+                discount = discountAmount;
+            }
+            
+            const afterDiscount = Math.max(0, subtotal - discount);
+            const tax = afterDiscount * 0.20; // %20 KDV
+            const grandTotal = afterDiscount + tax;
+            
+            // Update UI
+            document.getElementById('subtotal').textContent = formatCurrency(subtotal);
+            document.getElementById('discount').textContent = `-${formatCurrency(discount)}`;
+            document.getElementById('tax').textContent = formatCurrency(tax);
+            document.getElementById('grand-total').textContent = formatCurrency(grandTotal);
+            
+            // Show/hide discount row
+            const discountRow = document.querySelector('.discount-row');
+            discountRow.style.display = discount > 0 ? 'flex' : 'none';
+            
+            // Update discount message
+            const discountMessage = document.getElementById('discount-message');
+            if (discountCode) {
+                discountMessage.innerHTML = `
+                    <div class="discount-success">
+                        <i class="fas fa-check-circle"></i>
+                        ${discountCode.code} kodu uygulandı (${discountCode.type === 'percentage' ? discountCode.value + '%' : formatCurrency(discountCode.amount)})
+                        <button class="remove-discount" onclick="removeDiscount()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `;
+            } else {
+                discountMessage.innerHTML = '';
+            }
+        }
+        
+        function applyDiscountCode(code) {
+            const discountCodes = {
+                'ELALDI10': { value: 10, type: 'percentage', minAmount: 100 },
+                'ELALDI20': { value: 20, type: 'percentage', minAmount: 300 },
+                'WELCOME50': { value: 50, type: 'fixed', amount: 50 },
+                'FIRSTORDER': { value: 15, type: 'percentage', minAmount: 0 }
+            };
+            
+            const discount = discountCodes[code.toUpperCase()];
+            const messageEl = document.getElementById('discount-message');
+            
+            if (discount) {
+                localStorage.setItem('discount_code', JSON.stringify({
+                    code: code.toUpperCase(),
+                    ...discount
+                }));
+                
+                messageEl.innerHTML = `
+                    <div class="discount-success">
+                        <i class="fas fa-check-circle"></i>
+                        İndirim kodu uygulandı!
+                    </div>
+                `;
+                
+                updateTotals();
+            } else {
+                messageEl.innerHTML = `
+                    <div class="discount-error">
+                        <i class="fas fa-times-circle"></i>
+                        Geçersiz indirim kodu
+                    </div>
+                `;
+            }
+            
+            setTimeout(() => {
+                messageEl.innerHTML = '';
+            }, 3000);
+        }
+        
+        function removeDiscount() {
+            localStorage.removeItem('discount_code');
+            document.getElementById('discount-code').value = '';
+            updateTotals();
+        }
+        
+        function updatePaymentDetails(method) {
+            const container = document.getElementById('payment-details');
+            
+            switch (method) {
+                case 'eft':
+                    container.innerHTML = `
+                    <div class="eft-details">
+                        <h4>EFT / Havale Talimatları</h4>
+                        <p>Lütfen aşağıdaki hesap bilgilerine ödeme yapınız:</p>
+                        
+                        <div class="bank-accounts">
+                            <div class="bank-account">
+                                <h5>Ziraat Bankası</h5>
+                                <p><strong>Hesap Adı:</strong> HÜSEYİN ELALDİ PAZARLAMA DANIŞMANLIK</p>
+                                <p><strong>IBAN:</strong> <code>TR00 0000 0000 0000 0000 0000 00</code></p>
+                                <p><strong>Hesap No:</strong> 000-0000000-0000</p>
+                                <p><strong>Şube:</strong> Merkez Şube (0000)</p>
+                            </div>
+                            
+                            <div class="bank-account">
+                                <h5>İş Bankası</h5>
+                                <p><strong>Hesap Adı:</strong> HÜSEYİN ELALDİ PAZARLAMA DANIŞMANLIK</p>
+                                <p><strong>IBAN:</strong> <code>TR00 0000 0000 0000 0000 0000 00</code></p>
+                                <p><strong>Hesap No:</strong> 0000-0000000</p>
+                                <p><strong>Şube:</strong> Merkez Şube (0000)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-instructions">
+                            <h5>Önemli Notlar:</h5>
+                            <ul>
+                                <li>Ödeme açıklamasına <strong>"ELALDI-<span id="order-ref">REF123</span>"</strong> yazmayı unutmayın.</li>
+                                <li>EFT/Havale işlemi tamamlandıktan sonra WhatsApp +90 542 123 9770 numaradan bilgi veriniz.</li>
+                                <li>Ödeme onayı Admin (Hüseyin Elaldi) tarafından yapılacaktır.</li>
+                                <li>Onay süresi 1-2 iş günüdür.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    `;
+                    break;
+                    
+                case 'card':
+                    container.innerHTML = `
+                    <div class="card-details">
+                        <h4>Kredi Kartı Bilgileri</h4>
+                        
+                        <div class="form-group">
+                            <label for="card-name">Kart Üzerindeki İsim *</label>
+                            <input type="text" id="card-name" name="card-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="card-number">Kart Numarası *</label>
+                            <div class="card-input-wrapper">
+                                <input type="text" id="card-number" name="card-number" 
+                                       pattern="[0-9]{16}" maxlength="16" 
+                                       placeholder="0000 0000 0000 0000" required>
+                                <div class="card-icons">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <i class="fab fa-cc-amex"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry-date">Son Kullanma Tarihi *</label>
+                                <input type="text" id="expiry-date" name="expiry-date" 
+                                       pattern="(0[1-9]|1[0-2])\/[0-9]{2}" 
+                                       placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvc">CVC *</label>
+                                <input type="text" id="cvc" name="cvc" 
+                                       pattern="[0-9]{3,4}" maxlength="4" 
+                                       placeholder="123" required>
+                            </div>
+                        </div>
+                        
+                        <div class="security-notice">
+                            <i class="fas fa-lock"></i>
+                            <p>Kart bilgileriniz güvenli bir şekilde şifrelenmektedir.</p>
+                        </div>
+                    </div>
+                    `;
+                    
+                    // Add card number formatting
+                    const cardNumberInput = document.getElementById('card-number');
+                    if (cardNumberInput) {
+                        cardNumberInput.addEventListener('input', function(e) {
+                            let value = e.target.value.replace(/\D/g, '');
+                            value = value.replace(/(\d{4})/g, '$1 ').trim();
+                            e.target.value = value.substring(0, 19);
+                        });
+                    }
+                    
+                    // Add expiry date formatting
+                    const expiryInput = document.getElementById('expiry-date');
+                    if (expiryInput) {
+                        expiryInput.addEventListener('input', function(e) {
+                            let value = e.target.value.replace(/\D/g, '');
+                            if (value.length >= 2) {
+                                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                            }
+                            e.target.value = value.substring(0, 5);
+                        });
+                    }
+                    break;
+                    
+                case 'qr':
+                    container.innerHTML = `
+                    <div class="qr-details">
+                        <h4>QR Kod ile Ödeme</h4>
+                        <p>Aşağıdaki QR kodu telefonunuzla tarayarak ödeme yapabilirsiniz.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-code" id="qr-code-display">
+                                <!-- QR code will be generated here -->
+                            </div>
+                            <div class="qr-instructions">
+                                <ol>
+                                    <li>QR kodu telefonunuzla tarayın</li>
+                                    <li>Ödeme sayfasına yönlendirileceksiniz</li>
+                                    <li>Ödemenizi tamamlayın</li>
+                                    <li>Otomatik olarak yönlendirileceksiniz</li>
+                                </ol>
+                                <p class="qr-expiry">Bu kod 15 dakika geçerlidir.</p>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                    
+                    // Generate QR code
+                    generateQRCode();
+                    break;
+            }
+        }
+        
+        function generateQRCode() {
+            const qrContainer = document.getElementById('qr-code-display');
+            if (!qrContainer) return;
+            
+            // Simple QR code visualization
+            qrContainer.innerHTML = `
+            <div class="qr-visual">
+                <div class="qr-corner top-left"></div>
+                <div class="qr-corner top-right"></div>
+                <div class="qr-corner bottom-left"></div>
+                <div class="qr-content">
+                    <div class="qr-logo">E</div>
+                    <div class="qr-amount">
+                        <span class="qr-label">Tutar:</span>
+                        <span class="qr-value">${document.getElementById('grand-total').textContent}</span>
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+        
+        function processPayment() {
+            const form = document.getElementById('checkout-form');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            // Show loading
+            document.getElementById('loading-overlay').style.display = 'flex';
+            
+            // Get form data
+            const formData = new FormData(form);
+            const paymentData = {
+                method: formData.get('payment-method'),
+                firstName: formData.get('first-name'),
+                lastName: formData.get('last-name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                taxNumber: formData.get('tax-number'),
+                address: formData.get('address'),
+                city: formData.get('city'),
+                postalCode: formData.get('postal-code'),
+                needInvoice: formData.get('need-invoice') === 'on',
+                terms: formData.get('terms') === 'on',
+                marketing: formData.get('marketing') === 'on'
+            };
+            
+            // Card details
+            if (paymentData.method === 'card') {
+                paymentData.cardName = document.getElementById('card-name')?.value;
+                paymentData.cardNumber = document.getElementById('card-number')?.value;
+                paymentData.expiryDate = document.getElementById('expiry-date')?.value;
+                paymentData.cvc = document.getElementById('cvc')?.value;
+            }
+            
+            // Simulate payment processing
+            setTimeout(() => {
+                // Hide loading
+                document.getElementById('loading-overlay').style.display = 'none';
+                
+                // For demo purposes, always succeed
+                const success = Math.random() > 0.2; // 80% success rate for demo
+                
+                if (success) {
+                    // Create order
+                    const orderId = 'ORD-' + Date.now();
+                    const order = {
+                        id: orderId,
+                        ...paymentData,
+                        amount: getGrandTotal(),
+                        discount: JSON.parse(localStorage.getItem('discount_code')),
+                        items: JSON.parse(localStorage.getItem('elaldi_cart')) || [],
+                        plan: JSON.parse(localStorage.getItem('selected_plan')),
+                        date: new Date().toISOString(),
+                        status: paymentData.method === 'eft' ? 'pending_approval' : 'completed'
+                    };
+                    
+                    // Save order
+                    const orders = JSON.parse(localStorage.getItem('elaldi_orders')) || [];
+                    orders.push(order);
+                    localStorage.setItem('elaldi_orders', JSON.stringify(orders));
+                    
+                    // Clear cart
+                    localStorage.removeItem('elaldi_cart');
+                    localStorage.removeItem('selected_plan');
+                    localStorage.removeItem('discount_code');
+                    
+                    // Redirect to success page
+                    window.location.href = 'success.html?order=' + orderId;
+                } else {
+                    // Show error
+                    alert('Ödeme işlemi başarısız. Lütfen tekrar deneyin.');
+                }
+            }, 2000);
+        }
+        
+        function parsePrice(priceString) {
+            if (typeof priceString === 'number') return priceString;
+            const numericString = priceString.replace(/[^\d.,]/g, '').replace(',', '.');
+            return parseFloat(numericString) || 0;
+        }
+        
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('tr-TR', {
+                style: 'currency',
+                currency: 'TRY'
+            }).format(amount);
+        }
+        
+        function getGrandTotal() {
+            const totalText = document.getElementById('grand-total').textContent;
+            return parsePrice(totalText);
+        }
+    </script>
+    
+    <style>
+        /* Checkout Page Specific Styles */
+        .checkout-header {
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 0;
+            background: var(--bg-white);
+            z-index: 100;
+        }
+        
+        .checkout-progress {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin: 0 var(--spacing-xl);
+        }
+        
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-xs);
+            position: relative;
+        }
+        
+        .progress-step::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: -50%;
+            width: 100%;
+            height: 2px;
+            background: var(--border-color);
+            z-index: -1;
+        }
+        
+        .progress-step:first-child::before {
+            display: none;
+        }
+        
+        .progress-step.active::before {
+            background: var(--primary-color);
+        }
+        
+        .step-number {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--border-color);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-sm);
+            font-weight: 600;
+        }
+        
+        .progress-step.active .step-number {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .step-label {
+            font-size: var(--text-sm);
+            color: var(--text-light);
+            white-space: nowrap;
+        }
+        
+        .progress-step.active .step-label {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: var(--success-color);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+            font-weight: 600;
+        }
+        
+        .checkout-main {
+            padding: var(--spacing-2xl) 0;
+            background: var(--bg-light);
+            min-height: calc(100vh - 200px);
+        }
+        
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--spacing-2xl);
+        }
+        
+        @media (max-width: 992px) {
+            .checkout-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .order-summary {
+            background: var(--bg-white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            box-shadow: var(--shadow-lg);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .summary-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .summary-header h2 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin: 0;
+        }
+        
+        .cart-items {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .cart-item-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .cart-item-summary:last-child {
+            border-bottom: none;
+        }
+        
+        .item-info h4 {
+            margin: 0 0 var(--spacing-xs);
+            font-size: var(--text-base);
+        }
+        
+        .item-info p {
+            margin: 0;
+            color: var(--text-light);
+            font-size: var(--text-sm);
+        }
+        
+        .item-total {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: var(--spacing-2xl) 0;
+        }
+        
+        .empty-cart i {
+            font-size: 48px;
+            color: var(--border-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .empty-cart p {
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-light);
+        }
+        
+        .order-totals {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .total-row:last-child {
+            border-bottom: none;
+        }
+        
+        .grand-total {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--primary-color);
+            padding-top: var(--spacing-md);
+        }
+        
+        .discount-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .discount-input {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .discount-input input {
+            flex: 1;
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+        }
+        
+        .discount-message {
+            min-height: 24px;
+        }
+        
+        .discount-success {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--success-color);
+            font-size: var(--text-sm);
+        }
+        
+        .discount-error {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--danger-color);
+            font-size: var(--text-sm);
+        }
+        
+        .remove-discount {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 2px;
+            margin-left: auto;
+        }
+        
+        .remove-discount:hover {
+            color: var(--danger-color);
+        }
+        
+        .security-badges {
+            display: flex;
+            justify-content: space-around;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .badge i {
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+        
+        .badge span {
+            font-size: var(--text-xs);
+            color: var(--text-light);
+        }
+        
+        .checkout-form-container {
+            background: var(--bg-white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .form-header {
+            margin-bottom: var(--spacing-xl);
+            text-align: center;
+        }
+        
+        .form-header h1 {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .form-header p {
+            color: var(--text-light);
+        }
+        
+        .form-section {
+            margin-bottom: var(--spacing-2xl);
+            padding-bottom: var(--spacing-xl);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .form-section:last-child {
+            border-bottom: none;
+        }
+        
+        .form-section h3 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+            color: var(--primary-color);
+        }
+        
+        .payment-methods {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .payment-method-option {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .payment-method-option input[type="radio"] {
+            display: none;
+        }
+        
+        .payment-method-option label {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        
+        .payment-method-option input[type="radio"]:checked + label {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.05);
+        }
+        
+        .payment-method-option label:hover {
+            border-color: var(--primary-light);
+        }
+        
+        .payment-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+        }
+        
+        .payment-info h4 {
+            margin: 0 0 var(--spacing-xs);
+        }
+        
+        .payment-info p {
+            margin: 0 0 var(--spacing-xs);
+            color: var(--text-light);
+        }
+        
+        .payment-info small {
+            color: var(--text-light);
+            font-size: var(--text-sm);
+        }
+        
+        .payment-details {
+            margin-top: var(--spacing-xl);
+            padding: var(--spacing-xl);
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+        }
+        
+        .bank-accounts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        @media (max-width: 768px) {
+            .bank-accounts {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .bank-account {
+            padding: var(--spacing-lg);
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .bank-account h5 {
+            margin: 0 0 var(--spacing-md);
+            color: var(--primary-color);
+        }
+        
+        .bank-account p {
+            margin: 0 0 var(--spacing-xs);
+            font-size: var(--text-sm);
+        }
+        
+        .bank-account code {
+            background: var(--bg-light);
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+            font-family: monospace;
+        }
+        
+        .payment-instructions {
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .payment-instructions h5 {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .payment-instructions ul {
+            margin: 0;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .payment-instructions li {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .card-input-wrapper {
+            position: relative;
+        }
+        
+        .card-icons {
+            position: absolute;
+            right: var(--spacing-md);
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+        
+        .card-icons i {
+            color: var(--text-light);
+            font-size: 24px;
+        }
+        
+        .security-notice {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            background: var(--success-color);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .security-notice i {
+            font-size: 24px;
+        }
+        
+        .qr-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+            margin-top: var(--spacing-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .qr-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .qr-code {
+            background: var(--white);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .qr-visual {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: repeating-linear-gradient(
+                0deg,
+                var(--bg-light) 0,
+                var(--bg-light) 2px,
+                transparent 2px,
+                transparent 10px
+            ),
+            repeating-linear-gradient(
+                90deg,
+                var(--bg-light) 0,
+                var(--bg-light) 2px,
+                transparent 2px,
+                transparent 10px
+            );
+        }
+        
+        .qr-corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--dark-color);
+        }
+        
+        .qr-corner.top-left {
+            top: 20px;
+            left: 20px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .qr-corner.top-right {
+            top: 20px;
+            right: 20px;
+            border-left: none;
+            border-bottom: none;
+        }
+        
+        .qr-corner.bottom-left {
+            bottom: 20px;
+            left: 20px;
+            border-right: none;
+            border-top: none;
+        }
+        
+        .qr-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .qr-logo {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 10px;
+        }
+        
+        .qr-amount {
+            background: var(--white);
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .qr-label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+        
+        .qr-value {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .qr-expiry {
+            text-align: center;
+            color: var(--text-light);
+            font-size: var(--text-sm);
+            margin-top: var(--spacing-md);
+        }
+        
+        .terms-container {
+            background: var(--bg-light);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+        }
+        
+        .terms-content {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .terms-content h4 {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .terms-content ul {
+            margin: 0;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .terms-content li {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .form-actions {
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .security-note {
+            text-align: center;
+            margin-top: var(--spacing-md);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .checkout-footer {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: var(--spacing-2xl) 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .footer-section h4 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+        }
+        
+        .footer-section p {
+            margin: 0 0 var(--spacing-sm);
+            opacity: 0.8;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .footer-bottom p {
+            margin: var(--spacing-xs) 0;
+        }
+        
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .loading-content {
+            background: var(--bg-white);
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--border-color);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto var(--spacing-lg);
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,309 @@
+{
+  "services": [
+    {
+      "id": "seo-analiz",
+      "name": "SEO Analiz",
+      "description": "Web sitenizin SEO performansını detaylı analiz edip iyileştirme önerileri sunuyoruz.",
+      "detailedDescription": "Kapsamlı SEO analizimiz ile web sitenizin arama motorlarındaki performansını detaylı bir şekilde inceliyoruz. Teknik SEO, içerik analizi, backlink profili ve rakip analizi yaparak size özel iyileştirme önerileri sunuyoruz.",
+      "price": "₺499",
+      "originalPrice": "₺799",
+      "discount": "38%",
+      "duration": "2-3 iş günü",
+      "icon": "fa-chart-line",
+      "category": "seo",
+      "features": [
+        "Tam kapsamlı teknik SEO analizi",
+        "İçerik optimizasyon önerileri",
+        "Rakip analizi raporu",
+        "Keyword araştırması",
+        "Backlink analizi",
+        "Site hızı optimizasyon önerileri",
+        "Mobil uyumluluk kontrolü",
+        "Detaylı raporlama"
+      ],
+      "popular": true,
+      "rating": 4.9,
+      "reviews": 124,
+      "deliveryTime": "3 gün",
+      "tags": ["seo", "analiz", "optimizasyon", "teknik"],
+      "image": "images/services/seo-analiz.jpg",
+      "faq": [
+        {
+          "question": "SEO analiz raporu ne zaman teslim edilir?",
+          "answer": "SEO analiz raporu siparişinizden sonra 2-3 iş günü içinde e-posta adresinize gönderilir."
+        },
+        {
+          "question": "SEO analizi hangi araçlarla yapılıyor?",
+          "answer": "Ahrefs, SEMrush, Google Search Console, PageSpeed Insights, Screaming Frog gibi profesyonel araçlar kullanıyoruz."
+        }
+      ]
+    },
+    {
+      "id": "sosyal-medya-stratejisi",
+      "name": "Sosyal Medya Stratejisi",
+      "description": "Markanız için etkili sosyal medya stratejisi ve içerik planı oluşturuyoruz.",
+      "detailedDescription": "Markanızın hedef kitlesine ulaşmak için özel olarak tasarlanmış sosyal medya stratejisi hazırlıyoruz. İçerik takvimi, platform analizi, rakip takibi ve performans ölçüm metrikleri ile kapsamlı bir plan sunuyoruz.",
+      "price": "₺799",
+      "originalPrice": "₺1,199",
+      "discount": "33%",
+      "duration": "5 iş günü",
+      "icon": "fa-bullhorn",
+      "category": "sosyal-medya",
+      "features": [
+        "Platform analizi ve önerileri",
+        "Aylık içerik takvimi",
+        "Hedef kitle analizi",
+        "Rakip analizi",
+        "İçerik stratejisi",
+        "Etkileşim artırma teknikleri",
+        "Performans ölçüm metrikleri",
+        "Community management planı"
+      ],
+      "popular": true,
+      "rating": 4.8,
+      "reviews": 89,
+      "deliveryTime": "5 gün",
+      "tags": ["sosyal medya", "içerik", "strateji", "planlama"],
+      "image": "images/services/sosyal-medya.jpg",
+      "faq": [
+        {
+          "question": "Hangi sosyal medya platformları için strateji hazırlıyorsunuz?",
+          "answer": "Instagram, Facebook, Twitter, LinkedIn, TikTok, Pinterest gibi tüm major platformlar için strateji hazırlıyoruz."
+        }
+      ]
+    },
+    {
+      "id": "google-ads-optimizasyon",
+      "name": "Google Ads Optimizasyon",
+      "description": "Google Ads kampanyalarınızı optimize ederek daha fazla dönüşüm elde edin.",
+      "detailedDescription": "Mevcut Google Ads kampanyalarınızı analiz ediyor, performansı artırmak için optimize ediyoruz. Keyword araştırması, reklam metni optimizasyonu, teklif stratejileri ve dönüşüm takibi ile ROI'nizi maksimize ediyoruz.",
+      "price": "₺1,199",
+      "originalPrice": "₺1,599",
+      "discount": "25%",
+      "duration": "7 iş günü",
+      "icon": "fa-ad",
+      "category": "reklam",
+      "features": [
+        "Kampanya analizi ve raporlama",
+        "Keyword araştırması ve optimizasyonu",
+        "Reklam metni iyileştirmeleri",
+        "Teklif stratejisi optimizasyonu",
+        "Reklam grubu yeniden yapılandırma",
+        "Dönüşüm takibi kurulumu",
+        "Rakip analizi",
+        "A/B test planlaması"
+      ],
+      "popular": true,
+      "rating": 4.7,
+      "reviews": 67,
+      "deliveryTime": "7 gün",
+      "tags": ["google ads", "reklam", "optimizasyon", "ppc"],
+      "image": "images/services/google-ads.jpg",
+      "faq": [
+        {
+          "question": "Google Ads optimizasyonu ne kadar sürer?",
+          "answer": "Optimizasyon işlemi 7 iş günü sürmektedir. Bu süre kampanyanızın büyüklüğüne göre değişebilir."
+        }
+      ]
+    },
+    {
+      "id": "web-site-analiz",
+      "name": "Web Site Analiz",
+      "description": "Web sitenizin kullanıcı deneyimi ve teknik yapısını analiz ediyoruz.",
+      "detailedDescription": "Web sitenizin kullanıcı deneyimi, teknik altyapısı ve performansını detaylı şekilde analiz ediyoruz. Hız optimizasyonu, mobil uyumluluk, güvenlik ve kullanılabilirlik testleri yapıyoruz.",
+      "price": "₺699",
+      "originalPrice": "₺999",
+      "discount": "30%",
+      "duration": "4 iş günü",
+      "icon": "fa-globe",
+      "category": "analiz",
+      "features": [
+        "Kullanıcı deneyimi analizi",
+        "Site hızı testi ve optimizasyon önerileri",
+        "Mobil uyumluluk kontrolü",
+        "Güvenlik açığı taraması",
+        "SEO dostu yapı analizi",
+        "Dönüşüm oranı iyileştirme önerileri",
+        "Erişilebilirlik kontrolü",
+        "Detaylı raporlama"
+      ],
+      "popular": false,
+      "rating": 4.6,
+      "reviews": 42,
+      "deliveryTime": "4 gün",
+      "tags": ["web", "analiz", "performans", "kullanıcı deneyimi"],
+      "image": "images/services/web-analiz.jpg"
+    },
+    {
+      "id": "e-ticaret-stratejisi",
+      "name": "E-Ticaret Stratejisi",
+      "description": "E-ticaret siteniz için satışları artıracak kapsamlı strateji planı.",
+      "detailedDescription": "E-ticaret işinizi büyütmek için özel olarak hazırlanmış stratejik plan. Ürün optimizasyonu, pazarlama stratejileri, müşteri deneyimi iyileştirmeleri ve satış kanalı analizleri.",
+      "price": "₺1,499",
+      "originalPrice": "₺2,199",
+      "discount": "32%",
+      "duration": "10 iş günü",
+      "icon": "fa-shopping-cart",
+      "category": "e-ticaret",
+      "features": [
+        "Ürün sayfası optimizasyonu",
+        "Satış kanalı analizi",
+        "Müşteri yolculuğu haritalama",
+        "Abandoned cart stratejisi",
+        "SEO stratejisi",
+        "Sosyal medya satış stratejisi",
+        "Email marketing planı",
+        "Rakip analizi"
+      ],
+      "popular": false,
+      "rating": 4.9,
+      "reviews": 31,
+      "deliveryTime": "10 gün",
+      "tags": ["e-ticaret", "strateji", "satış", "optimizasyon"],
+      "image": "images/services/e-ticaret.jpg"
+    },
+    {
+      "id": "email-marketing-kurulum",
+      "name": "Email Marketing Kurulum",
+      "description": "Profesyonel email marketing sistemi kurulumu ve strateji planı.",
+      "detailedDescription": "Mailchimp, Sendinblue veya GetResponse gibi platformlarda profesyonel email marketing sistemi kuruyoruz. Segmentasyon, otomasyon, A/B test ve performans analizi ile etkili bir email marketing stratejisi oluşturuyoruz.",
+      "price": "₺899",
+      "originalPrice": "₺1,299",
+      "discount": "31%",
+      "duration": "5 iş günü",
+      "icon": "fa-envelope",
+      "category": "email",
+      "features": [
+        "Email marketing platform kurulumu",
+        "Lead magnet tasarımı",
+        "Otomatik email serisi oluşturma",
+        "Müşteri segmentasyonu",
+        "A/B test kurulumu",
+        "Performans takip sistemi",
+        "GDPR uyumluluk kontrolü",
+        "Template tasarımı"
+      ],
+      "popular": false,
+      "rating": 4.7,
+      "reviews": 28,
+      "deliveryTime": "5 gün",
+      "tags": ["email", "marketing", "otomasyon", "kurulum"],
+      "image": "images/services/email-marketing.jpg"
+    },
+    {
+      "id": "instagram-icerik-plani",
+      "name": "Instagram İçerik Planı",
+      "description": "Instagram hesabınız için 1 aylık içerik planı ve stratejisi.",
+      "detailedDescription": "Instagram hesabınızın organik büyümesi için özel olarak hazırlanmış 1 aylık içerik planı. İçerik fikirleri, post planlaması, story stratejileri ve etkileşim artırma teknikleri.",
+      "price": "₺599",
+      "originalPrice": "₺899",
+      "discount": "33%",
+      "duration": "3 iş günü",
+      "icon": "fa-instagram",
+      "category": "sosyal-medya",
+      "features": [
+        "1 aylık içerik takvimi",
+        "İçerik fikirleri ve başlıklar",
+        "Hashtag stratejisi",
+        "Story içerik planı",
+        "Reels stratejisi",
+        "Etkileşim artırma teknikleri",
+        "Profil optimizasyonu",
+        "Performans metrikleri"
+      ],
+      "popular": true,
+      "rating": 4.8,
+      "reviews": 56,
+      "deliveryTime": "3 gün",
+      "tags": ["instagram", "içerik", "plan", "sosyal medya"],
+      "image": "images/services/instagram-plan.jpg"
+    },
+    {
+      "id": "logo-tasarim",
+      "name": "Logo Tasarım",
+      "description": "Markanıza özel profesyonel logo tasarımı ve marka kimliği.",
+      "detailedDescription": "Markanızın kişiliğini yansıtan profesyonel logo tasarımı. Tasarım süreci, revizyonlar ve farklı formatlarda teslimat ile eksiksiz bir logo paketi.",
+      "price": "₺1,299",
+      "originalPrice": "₺1,999",
+      "discount": "35%",
+      "duration": "7 iş günü",
+      "icon": "fa-palette",
+      "category": "tasarım",
+      "features": [
+        "3 farklı logo konsepti",
+        "2 revizyon hakkı",
+        "Vector formatlar (AI, EPS, SVG)",
+        "Raster formatlar (PNG, JPG)",
+        "Siyah-beyaz versiyon",
+        "Favicon tasarımı",
+        "Logo kullanım kılavuzu",
+        "Telif hakkı devri"
+      ],
+      "popular": false,
+      "rating": 4.9,
+      "reviews": 73,
+      "deliveryTime": "7 gün",
+      "tags": ["logo", "tasarım", "marka", "kimlik"],
+      "image": "images/services/logo-tasarim.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "id": "seo",
+      "name": "SEO",
+      "description": "Arama motoru optimizasyonu hizmetleri",
+      "icon": "fa-search",
+      "count": 2
+    },
+    {
+      "id": "sosyal-medya",
+      "name": "Sosyal Medya",
+      "description": "Sosyal medya yönetimi ve stratejileri",
+      "icon": "fa-hashtag",
+      "count": 2
+    },
+    {
+      "id": "reklam",
+      "name": "Reklam",
+      "description": "Dijital reklam yönetimi ve optimizasyonu",
+      "icon": "fa-ad",
+      "count": 1
+    },
+    {
+      "id": "analiz",
+      "name": "Analiz",
+      "description": "Web site ve performans analizleri",
+      "icon": "fa-chart-bar",
+      "count": 1
+    },
+    {
+      "id": "e-ticaret",
+      "name": "E-Ticaret",
+      "description": "E-ticaret stratejileri ve optimizasyonu",
+      "icon": "fa-shopping-bag",
+      "count": 1
+    },
+    {
+      "id": "email",
+      "name": "Email Marketing",
+      "description": "Email pazarlama sistemleri",
+      "icon": "fa-envelope-open-text",
+      "count": 1
+    },
+    {
+      "id": "tasarım",
+      "name": "Tasarım",
+      "description": "Grafik tasarım hizmetleri",
+      "icon": "fa-paint-brush",
+      "count": 1
+    }
+  ],
+  "stats": {
+    "totalServices": 8,
+    "averageRating": 4.8,
+    "totalReviews": 510,
+    "averageDeliveryTime": "5.4 gün",
+    "mostPopular": "SEO Analiz",
+    "bestRated": "Logo Tasarım"
+  }
+}

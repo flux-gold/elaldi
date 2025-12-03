@@ -1,0 +1,197 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GoldFlux Kullanıcı Paneli - Hizmetlerinizi ve Aboneliklerinizi Yönetin">
+    <title>Kullanıcı Paneli | GoldFlux</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body class="dashboard-page">
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="GoldFlux Logo" width="120" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Ana Sayfa</a>
+                <a href="services.html">Hizmetler</a>
+                <a href="saas.html">SaaS Araçları</a>
+                <a href="blog.html">Blog</a>
+                <a href="dashboard.html" class="active">Panelim</a>
+                <a href="contact.html" class="btn-outline">İletişim</a>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <div class="user-profile">
+                <img src="../images/avatars/avatar1.jpg" alt="Kullanıcı Avatar" class="user-avatar">
+                <h3 class="user-name">Kullanıcı Adı</h3>
+                <p class="user-email">kullanici@email.com</p>
+            </div>
+            <nav class="dashboard-nav">
+                <a href="#overview" class="nav-item active"><span class="nav-icon">📊</span> Genel Bakış</a>
+                <a href="#subscriptions" class="nav-item"><span class="nav-icon">🔄</span> Abonelikler</a>
+                <a href="#services" class="nav-item"><span class="nav-icon">🛠️</span> Hizmetlerim</a>
+                <a href="#orders" class="nav-item"><span class="nav-icon">📦</span> Siparişlerim</a>
+                <a href="#invoices" class="nav-item"><span class="nav-icon">🧾</span> Faturalar</a>
+                <a href="#favorites" class="nav-item"><span class="nav-icon">❤️</span> Favoriler</a>
+                <a href="#settings" class="nav-item"><span class="nav-icon">⚙️</span> Ayarlar</a>
+                <a href="#support" class="nav-item"><span class="nav-icon">💬</span> Destek</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn">🚪 Çıkış Yap</button>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+            <section id="overview" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Genel Bakış</h1>
+                    <div class="user-stats">
+                        <div class="stat-card"><div class="stat-icon">🔄</div><div class="stat-info"><h3>Aktif Abonelik</h3><p class="stat-value">Professional</p></div></div>
+                        <div class="stat-card"><div class="stat-icon">📊</div><div class="stat-info"><h3>Kullanım</h3><p class="stat-value">%65</p></div></div>
+                        <div class="stat-card"><div class="stat-icon">💰</div><div class="stat-info"><h3>Toplam Harcama</h3><p class="stat-value">₺2,997</p></div></div>
+                    </div>
+                </div>
+
+                <div class="activity-section">
+                    <h2>Son Aktiviteler</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content"><p><strong>Ödeme Onaylandı</strong> - Professional Plan</p><span class="activity-time">2 saat önce</span></div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📈</div>
+                            <div class="activity-content"><p><strong>Rapor Oluşturuldu</strong> - Aylık Analiz</p><span class="activity-time">1 gün önce</span></div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🛠️</div>
+                            <div class="activity-content"><p><strong>Hizmet Eklendi</strong> - SEO Analizi</p><span class="activity-time">3 gün önce</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h2>Hızlı İşlemler</h2>
+                    <div class="action-buttons">
+                        <button class="action-btn" onclick="upgradePlan()"><span class="action-icon">⬆️</span><span>Plan Yükselt</span></button>
+                        <button class="action-btn" onclick="downloadInvoice()"><span class="action-icon">📥</span><span>Fatura İndir</span></button>
+                        <button class="action-btn" onclick="requestSupport()"><span class="action-icon">💬</span><span>Destek Talebi</span></button>
+                        <button class="action-btn" onclick="addService()"><span class="action-icon">➕</span><span>Hizmet Ekle</span></button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="subscriptions" class="dashboard-section">
+                <div class="section-header"><h1>Aboneliklerim</h1><button class="btn-primary" onclick="manageSubscription()">Aboneliği Yönet</button></div>
+                <div class="subscription-details">
+                    <div class="current-plan">
+                        <h3>Mevcut Plan: <span class="plan-name">Professional</span></h3>
+                        <div class="plan-progress"><div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div><p>Döngü: 15/30 gün (%65 kullanıldı)</p></div>
+                        <div class="plan-features"><h4>Plan Özellikleri:</h4><ul><li>✓ 20 Proje Limiti</li><li>✓ Gelişmiş Analitik</li><li>✓ API Erişimi</li><li>✓ Öncelikli Destek</li></ul></div>
+                    </div>
+                    <div class="billing-info">
+                        <h3>Fatura Bilgileri</h3>
+                        <p><strong>Son Ödeme:</strong> ₺999 (15 Ara 2024)</p>
+                        <p><strong>Sonraki Ödeme:</strong> 15 Oca 2025</p>
+                        <p><strong>Ödeme Yöntemi:</strong> EFT/Havale</p>
+                        <button class="btn-outline" onclick="updatePayment()">Ödeme Yöntemini Güncelle</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="dashboard-section"><h1>Hizmetlerim</h1><div class="services-grid"></div></section>
+            <section id="orders" class="dashboard-section"><h1>Sipariş Geçmişi</h1><div class="orders-table"></div></section>
+            <section id="invoices" class="dashboard-section"><h1>Faturalar</h1><div class="invoices-list"></div></section>
+            <section id="favorites" class="dashboard-section"><h1>Favorilerim</h1><div class="favorites-grid"></div></section>
+
+            <section id="settings" class="dashboard-section">
+                <h1>Hesap Ayarları</h1>
+                <form class="settings-form" id="settingsForm">
+                    <div class="form-group"><label>Ad Soyad</label><input type="text" value="Kullanıcı Adı" required></div>
+                    <div class="form-group"><label>E-posta</label><input type="email" value="kullanici@email.com" required></div>
+                    <div class="form-group"><label>Telefon</label><input type="tel" value="+90 5XX XXX XX XX"></div>
+                    <div class="form-group"><label>Şifre Değiştir</label><input type="password" placeholder="Yeni şifre"><input type="password" placeholder="Yeni şifre tekrar"></div>
+                    <div class="form-group">
+                        <label>Bildirim Tercihleri</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> E-posta bildirimleri</label>
+                            <label><input type="checkbox" checked> SMS bildirimleri</label>
+                            <label><input type="checkbox"> Pazarlama e-postaları</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Değişiklikleri Kaydet</button>
+                </form>
+            </section>
+
+            <section id="support" class="dashboard-section">
+                <h1>Destek Merkezi</h1>
+                <div class="support-options">
+                    <div class="support-card" onclick="openChat()"><div class="support-icon">💬</div><h3>Canlı Destek</h3><p>Hemen yardım alın</p></div>
+                    <div class="support-card" onclick="createTicket()"><div class="support-icon">🎫</div><h3>Destek Talebi</h3><p>Yeni talep oluşturun</p></div>
+                    <div class="support-card" onclick="viewTickets()"><div class="support-icon">📋</div><h3>Taleplerim</h3><p>Geçmiş talepleri görün</p></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../images/logo.png" alt="Logo" class="footer-logo">
+                    <p>GoldFlux Pazarlama - Danışmanlık, mikro hizmetler ve SaaS çözümleri</p>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <p>📧 goldflux@email.com</p>
+                    <p>📱 +90 542 123 9770</p>
+                    <p>📷 @goldflux</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 GoldFlux. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('.dashboard-section');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetId) section.classList.add('active');
+                    });
+                });
+            });
+            loadUserData();
+        });
+
+        function loadUserData() {
+            const userData = {name: "Kullanıcı Adı", email: "kullanici@email.com", subscription: "Professional", usage: 65, totalSpent: 2997};
+            document.querySelector('.user-name').textContent = userData.name;
+            document.querySelector('.user-email').textContent = userData.email;
+        }
+    </script>
+</body>
+</html>

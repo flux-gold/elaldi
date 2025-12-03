@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ödeme Başarılı - Elaldi">
+    <title>Ödeme Başarılı | Elaldi</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="icon" href="../images/favicon.ico">
+    <style>
+        .success-page {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .success-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .success-icon {
+            font-size: 80px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        .success-details {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .btn-success {
+            flex: 1;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-outline {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #ff0;
+            animation: confetti-fall 5s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        @media (max-width: 480px) {
+            .success-container {
+                padding: 30px 20px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="success-page">
+    <div class="success-container">
+        <div class="success-icon">🎉</div>
+        <h1>Ödeme Başarılı!</h1>
+        <p>Siparişiniz alınmıştır. Admin onayından sonra hizmetleriniz aktif olacaktır.</p>
+        
+        <div class="success-details">
+            <div class="detail-row">
+                <span>Sipariş Numarası:</span>
+                <strong id="orderNumber">ELD-20241215-001</strong>
+            </div>
+            <div class="detail-row">
+                <span>Ödeme Tutarı:</span>
+                <strong id="amount">₺999.00</strong>
+            </div>
+            <div class="detail-row">
+                <span>Plan:</span>
+                <strong id="plan">Professional</strong>
+            </div>
+            <div class="detail-row">
+                <span>Ödeme Yöntemi:</span>
+                <strong id="method">EFT/Havale</strong>
+            </div>
+            <div class="detail-row">
+                <span>Tarih:</span>
+                <strong id="date">15 Ara 2024, 14:30</strong>
+            </div>
+        </div>
+        
+        <p style="color: #666; font-size: 14px;">
+            <strong>Not:</strong> EFT/Havale ödemeleri admin onayı gerektirir. 
+            Onay genellikle 1-2 saat içinde tamamlanır. Onay durumunu kullanıcı panelinizden takip edebilirsiniz.
+        </p>
+        
+        <div class="action-buttons">
+            <a href="../pages/dashboard.html" class="btn-success">
+                <span>📊</span> Paneline Git
+            </a>
+            <a href="../pages/saas.html" class="btn-outline">
+                <span>🔄</span> Hizmetlere Dön
+            </a>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 14px; color: #666;">
+            Sorularınız için: <br>
+            📧 huseyinelald1@icloud.com <br>
+            📱 +90 542 123 9770
+        </p>
+    </div>
+
+    <script>
+        // Generate confetti
+        function createConfetti() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                document.body.appendChild(confetti);
+                
+                // Remove after animation
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+
+        // Get order details from URL
+        function getOrderDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Generate random order number
+            const orderNum = 'ELD-' + new Date().toISOString().slice(0,10).replace(/-/g,'') + 
+                           '-' + Math.floor(100 + Math.random() * 900);
+            
+            // Update UI
+            document.getElementById('orderNumber').textContent = orderNum;
+            document.getElementById('amount').textContent = urlParams.get('amount') || '₺999.00';
+            document.getElementById('plan').textContent = urlParams.get('plan') || 'Professional';
+            document.getElementById('method').textContent = urlParams.get('method') || 'EFT/Havale';
+            
+            // Current date
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('tr-TR', {
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            }) + ', ' + now.toLocaleTimeString('tr-TR', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            document.getElementById('date').textContent = dateStr;
+            
+            // Save to localStorage for dashboard
+            localStorage.setItem('lastOrder', JSON.stringify({
+                number: orderNum,
+                amount: urlParams.get('amount'),
+                plan: urlParams.get('plan'),
+                date: dateStr
+            }));
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createConfetti();
+            getOrderDetails();
+            
+            // Play success sound (optional)
+            const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3');
+            audio.volume = 0.3;
+            audio.play().catch(e => console.log("Audio play failed:", e));
+        });
+    </script>
+</body>
+</html>

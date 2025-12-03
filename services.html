@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikro Hizmetler - Elaldi Pazarlama Danışmanlığı</title>
+    <meta name="description" content="SEO analiz, sosyal medya stratejisi, Google Ads optimizasyon ve daha fazlası. Profesyonel pazarlama hizmetlerimizi keşfedin.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mikro Hizmetler - Elaldi Pazarlama Danışmanlığı">
+    <meta property="og:description" content="SEO analiz, sosyal medya stratejisi, Google Ads optimizasyon ve daha fazlası. Profesyonel pazarlama hizmetlerimizi keşfedin.">
+    <meta property="og:url" content="https://flux-gold.github.io/elaldi/services.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://flux-gold.github.io/elaldi/services.html">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <span class="logo-text">Elaldi</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Ana Sayfa</a></li>
+                    <li><a href="services.html" class="active">Hizmetler</a></li>
+                    <li><a href="saas.html">SaaS Araçları</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-outline" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline">Giriş Yap</a>
+                    <div class="mobile-toggle" id="mobile-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Profesyonel <span class="highlight">Pazarlama Hizmetleri</span></h1>
+                <p class="hero-subtitle">
+                    İşinizi büyütmek için ihtiyacınız olan tüm pazarlama hizmetleri tek platformda. 
+                    Tek seferlik mikro hizmetler ile hedeflerinize ulaşın.
+                </p>
+                <div class="hero-cta">
+                    <a href="#all-services" class="btn btn-primary btn-large">Tüm Hizmetleri Gör</a>
+                    <a href="contact.html" class="btn btn-outline btn-large">Ücretsiz Danışmanlık Al</a>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Mutlu Müşteri</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Memnuniyet Oranı</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24s</div>
+                    <div class="stat-label">Ort. Teslimat</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.8</div>
+                    <div class="stat-label">Ort. Puan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hizmet Kategorileri</h2>
+                <p class="section-subtitle">İhtiyacınıza uygun kategoriden hizmet seçin</p>
+            </div>
+            
+            <div class="categories-grid" id="categories-container">
+                <!-- Categories will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Services -->
+    <section class="popular-services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popüler Hizmetler</h2>
+                <p class="section-subtitle">En çok tercih edilen hizmetlerimiz</p>
+            </div>
+            
+            <div class="services-filter">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="sosyal-medya">Sosyal Medya</button>
+                <button class="filter-btn" data-filter="reklam">Reklam</button>
+                <button class="filter-btn" data-filter="e-ticaret">E-Ticaret</button>
+            </div>
+            
+            <div class="services-grid" id="popular-services-container">
+                <!-- Popular services will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- All Services -->
+    <section class="all-services" id="all-services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tüm Hizmetlerimiz</h2>
+                <p class="section-subtitle">İhtiyacınıza özel çözümler</p>
+            </div>
+            
+            <div class="services-container" id="all-services-container">
+                <!-- All services will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nasıl Çalışır?</h2>
+                <p class="section-subtitle">3 adımda profesyonel hizmet alın</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="step-title">Hizmet Seç</h3>
+                    <p class="step-description">
+                        İhtiyacınıza uygun hizmeti seçin ve sepete ekleyin.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3 class="step-title">Ödeme Yap</h3>
+                    <p class="step-description">
+                        Güvenli ödeme yöntemlerimizle kolayca ödeme yapın.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="step-title">Sonuçları Al</h3>
+                    <p class="step-description">
+                        Belirtilen sürede profesyonel raporunuzu alın.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sık Sorulan Sorular</h2>
+                <p class="section-subtitle">Hizmetlerimiz hakkında merak edilenler</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Hizmet teslimat süresi ne kadar?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Hizmet teslimat süreleri hizmetin türüne göre değişmektedir. SEO analiz 2-3 iş günü, sosyal medya stratejisi 5 iş günü, Google Ads optimizasyon 7 iş günü sürmektedir. Detaylı süre bilgilerini her hizmetin sayfasında bulabilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        İade politikası nedir?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Dijital hizmetlerde iade yapılmamaktadır. Ancak hizmet beklentilerinizi karşılamadığında revizyon hakkınız bulunmaktadır. Abonelik tabanlı hizmetlerde ise 7 gün içinde iptal edebilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Ödeme yöntemleri nelerdir?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>EFT/Havale, kredi kartı ve QR kod ile ödeme yapabilirsiniz. EFT/Havale ödemelerinde onay Admin (Hüseyin) tarafından 1-2 iş günü içinde yapılmaktadır.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Hizmet sonrası destek var mı?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet, tüm hizmetlerimizde 30 gün ücretsiz destek sunuyoruz. WhatsApp +90 542 123 9770 numaradan veya e-posta ile destek alabilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Birden fazla hizmet alabilir miyim?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet, birden fazla hizmeti sepete ekleyerek toplu ödeme yapabilirsiniz. Paket halinde hizmet almak isterseniz bizimle iletişime geçebilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Hizmetlerimizden Yararlanmaya Hazır mısınız?</h2>
+                <p>Profesyonel ekibimizle işinizi bir üst seviyeye taşıyın.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#all-services" class="btn btn-primary btn-large">
+                        <i class="fas fa-shopping-cart"></i> Hizmetleri Gör
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-comments"></i> Ücretsiz Danışmanlık
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">Elaldi</h3>
+                    <p class="footer-description">
+                        Pazarlama danışmanlığı, mikro hizmetler ve SaaS çözümlerinde lider platform.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/huseyinelaldi7" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/905421239770" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:huseyinelald1@icloud.com" aria-label="E-posta">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Ana Sayfa</a></li>
+                        <li><a href="services.html">Hizmetler</a></li>
+                        <li><a href="saas.html">SaaS Araçları</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Hizmetler</h4>
+                    <ul class="footer-links">
+                        <li><a href="#seo">SEO Analiz</a></li>
+                        <li><a href="#sosyal-medya">Sosyal Medya Stratejisi</a></li>
+                        <li><a href="#google-ads">Google Ads Optimizasyon</a></li>
+                        <li><a href="#web-analiz">Web Site Analiz</a></li>
+                        <li><a href="#e-ticaret">E-Ticaret Stratejisi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">İletişim</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+905421239770">+90 542 123 9770</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:huseyinelald1@icloud.com">huseyinelald1@icloud.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/905421239770" target="_blank">WhatsApp</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://instagram.com/huseyinelaldi7" target="_blank">@huseyinelaldi7</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Elaldi. Tüm hakları saklıdır.</p>
+                <p>
+                    <a href="privacy.html">Gizlilik Politikası</a> | 
+                    <a href="terms.html">Kullanım Şartları</a> | 
+                    <a href="cookies.html">Çerez Politikası</a>
+                </p>
+                <p>Ödemeler: EFT/Havale - Onay Admin (Hüseyin) tarafından yapılacaktır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Detail Modal -->
+    <div class="modal" id="service-modal">
+        <div class="modal-content modal-lg">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body" id="service-modal-content">
+                <!-- Service details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Services page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCategories();
+            loadServices();
+            setupEventListeners();
+            updateCurrentYear();
+        });
+        
+        function loadCategories() {
+            fetch('../data/services.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('categories-container');
+                    let html = '';
+                    
+                    data.categories.forEach(category => {
+                        html += `
+                        <div class="category-card" data-category="${category.id}">
+                            <div class="category-icon">
+                                <i class="fas ${category.icon}"></i>
+                            </div>
+                            <h3 class="category-name">${category.name}</h3>
+                            <p class="category-description">${category.description}</p>
+                            <div class="category-count">
+                                <span>${category.count} Hizmet</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        `;
+                    });
+                    
+                    container.innerHTML = html;
+                    
+                    // Add click event to category cards
+                    document.querySelectorAll('.category-card').forEach(card => {
+                        card.addEventListener('click', function() {
+                            const category = this.dataset.category;
+                            filterServices(category);
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading categories:', error);
+                });
+        }
+        
+        function loadServices() {
+            fetch('../data/services.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Load popular services
+                    const popularContainer = document.getElementById('popular-services-container');
+                    let popularHtml = '';
+                    
+                    data.services.filter(service => service.popular).forEach(service => {
+                        popularHtml += createServiceCard(service);
+                    });
+                    
+                    popularContainer.innerHTML = popularHtml;
+                    
+                    // Load all services
+                    const allContainer = document.getElementById('all-services-container');
+                    let allHtml = '';
+                    
+                    data.services.forEach(service => {
+                        allHtml += createServiceCard(service);
+                    });
+                    
+                    allContainer.innerHTML = allHtml;
+                    
+                    // Add click events to service cards
+                    document.querySelectorAll('.service-card').forEach(card => {
+                        card.addEventListener('click', function() {
+                            const serviceId = this.dataset.serviceId;
+                            showServiceDetails(serviceId, data.services);
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading services:', error);
+                });
+        }
+        
+        function createServiceCard(service) {
+            return `
+            <div class="service-card" data-service-id="${service.id}" data-category="${service.category}">
+                ${service.popular ? '<div class="popular-badge">Popüler</div>' : ''}
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas ${service.icon}"></i>
+                    </div>
+                    <div class="service-badge">
+                        <span class="rating">
+                            <i class="fas fa-star"></i> ${service.rating}
+                        </span>
+                        <span class="reviews">(${service.reviews})</span>
+                    </div>
+                </div>
+                
+                <h3 class="service-title">${service.name}</h3>
+                <p class="service-description">${service.description}</p>
+                
+                <div class="service-features">
+                    ${service.features.slice(0, 3).map(feature => `
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>${feature}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div class="service-footer">
+                    <div class="service-price">
+                        <div class="current-price">${service.price}</div>
+                        ${service.originalPrice ? `
+                        <div class="original-price">${service.originalPrice}</div>
+                        <div class="discount">${service.discount}</div>
+                        ` : ''}
+                    </div>
+                    <div class="service-delivery">
+                        <i class="fas fa-clock"></i>
+                        <span>${service.deliveryTime}</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary service-btn">
+                    <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                </button>
+            </div>
+            `;
+        }
+        
+        function filterServices(category) {
+            // Update filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.filter === category) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Filter services
+            document.querySelectorAll('.service-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Scroll to services
+            document.getElementById('all-services').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        function showServiceDetails(serviceId, services) {
+            const service = services.find(s => s.id === serviceId);
+            if (!service) return;
+            
+            const modalContent = document.getElementById('service-modal-content');
+            modalContent.innerHTML = `
+            <div class="service-detail">
+                <div class="detail-header">
+                    <div class="detail-title">
+                        <h2>${service.name}</h2>
+                        <div class="detail-badges">
+                            ${service.popular ? '<span class="badge popular">Popüler</span>' : ''}
+                            <span class="badge category">${service.category}</span>
+                            <span class="badge rating">
+                                <i class="fas fa-star"></i> ${service.rating} (${service.reviews} değerlendirme)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="detail-price">
+                        <div class="price-main">${service.price}</div>
+                        ${service.originalPrice ? `
+                        <div class="price-original">${service.originalPrice}</div>
+                        <div class="price-discount">${service.discount} indirim</div>
+                        ` : ''}
+                    </div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="detail-description">
+                        <h3>Açıklama</h3>
+                        <p>${service.detailedDescription || service.description}</p>
+                    </div>
+                    
+                    <div class="detail-features">
+                        <h3>Özellikler</h3>
+                        <div class="features-grid">
+                            ${service.features.map(feature => `
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>${feature}</span>
+                            </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="detail-info">
+                        <div class="info-item">
+                            <h4><i class="fas fa-clock"></i> Teslimat Süresi</h4>
+                            <p>${service.deliveryTime}</p>
+                        </div>
+                        <div class="info-item">
+                            <h4><i class="fas fa-tags"></i> Kategori</h4>
+                            <p>${service.category}</p>
+                        </div>
+                        <div class="info-item">
+                            <h4><i class="fas fa-star"></i> Değerlendirme</h4>
+                            <p>${service.rating}/5 (${service.reviews} değerlendirme)</p>
+                        </div>
+                    </div>
+                    
+                    ${service.faq ? `
+                    <div class="detail-faq">
+                        <h3>Sık Sorulan Sorular</h3>
+                        <div class="faq-items">
+                            ${service.faq.map(item => `
+                            <div class="faq-item">
+                                <h4>${item.question}</h4>
+                                <p>${item.answer}</p>
+                            </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+                </div>
+                
+                <div class="detail-actions">
+                    <button class="btn btn-primary btn-large" onclick="addToCart('${service.id}')">
+                        <i class="fas fa-shopping-cart"></i> Sepete Ekle - ${service.price}
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="showContactForm('${service.name}')">
+                        <i class="fas fa-question-circle"></i> Soru Sor
+                    </button>
+                </div>
+            </div>
+            `;
+            
+            // Show modal
+            const modal = document.getElementById('service-modal');
+            modal.style.display = 'flex';
+        }
+        
+        function addToCart(serviceId) {
+            fetch('../data/services.json')
+                .then(response => response.json())
+                .then(data => {
+                    const service = data.services.find(s => s.id === serviceId);
+                    if (!service) return;
+                    
+                    // Add to cart
+                    const cart = JSON.parse(localStorage.getItem('elaldi_cart')) || [];
+                    cart.push({
+                        id: service.id,
+                        name: service.name,
+                        price: service.price,
+                        type: 'service',
+                        quantity: 1
+                    });
+                    localStorage.setItem('elaldi_cart', JSON.stringify(cart));
+                    
+                    // Show notification
+                    if (window.ElaldiApp && window.ElaldiApp.showNotification) {
+                        window.ElaldiApp.showNotification(`${service.name} sepete eklendi!`, 'success');
+                    }
+                    
+                    // Update cart badge
+                    updateCartBadge();
+                    
+                    // Close modal
+                    document.getElementById('service-modal').style.display = 'none';
+                })
+                .catch(error => {
+                    console.error('Error adding to cart:', error);
+                });
+        }
+        
+        function showContactForm(serviceName) {
+            // Close service modal
+            document.getElementById('service-modal').style.display = 'none';
+            
+            // Redirect to contact page with service name
+            window.location.href = `contact.html?service=${encodeURIComponent(serviceName)}`;
+        }
+        
+        function updateCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('elaldi_cart')) || [];
+            const cartBadge = document.querySelector('.cart-badge');
+            if (cartBadge) {
+                cartBadge.textContent = cart.length;
+                cartBadge.style.display = cart.length > 0 ? 'flex' : 'none';
+            }
+        }
+        
+        function updateCurrentYear() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        }
+        
+        function setupEventListeners() {
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    filterServices(filter);
+                });
+            });
+            
+            // Modal close
+            document.querySelector('.modal-close').addEventListener('click', function() {
+                document.getElementById('service-modal').style.display = 'none';
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(event) {
+                const modal = document.getElementById('service-modal');
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Service card buttons
+            document.addEventListener('click', function(event) {
+                if (event.target.closest('.service-btn')) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    
+                    const card = event.target.closest('.service-card');
+                    const serviceId = card.dataset.serviceId;
+                    
+                    fetch('../data/services.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            const service = data.services.find(s => s.id === serviceId);
+                            if (service) {
+                                addToCart(service.id);
+                            }
+                        });
+                }
+            });
+        }
+    </script>
+    
+    <style>
+        /* Services Page Specific Styles */
+        .services-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .services-hero .hero-title {
+            color: var(--white);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .services-hero .hero-subtitle {
+            font-size: var(--text-xl);
+            max-width: 800px;
+            margin: 0 auto var(--spacing-2xl);
+            opacity: 0.9;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-2xl);
+            margin-top: var(--spacing-3xl);
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .stat-label {
+            font-size: var(--text-sm);
+            opacity: 0.8;
+        }
+        
+        .categories-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--bg-white);
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .category-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            border: 1px solid var(--border-color);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+        
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto var(--spacing-lg);
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            color: var(--white);
+        }
+        
+        .category-name {
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--text-xl);
+        }
+        
+        .category-description {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-lg);
+            font-size: var(--text-sm);
+        }
+        
+        .category-count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .popular-services {
+            padding: var(--spacing-3xl) 0;
+            background: var(--bg-light);
+        }
+        
+        .services-filter {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-2xl);
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: var(--spacing-sm) var(--spacing-xl);
+            border: 2px solid var(--border-color);
+            background: var(--bg-white);
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition-fast);
+        }
+        
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .filter-btn:hover:not(.active) {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+        }
+        
+        .all-services {
+            padding: var(--spacing-3xl) 0;
+            background: var(--bg-white);
+        }
+        
+        .services-container {
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .service-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            border: 1px solid var(--border-color);
+            position: relative;
+            cursor: pointer;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--gradient-secondary);
+            color: var(--white);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+        }
+        
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: var(--text-2xl);
+        }
+        
+        .service-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            background: var(--bg-light);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-full);
+        }
+        
+        .service-badge .rating {
+            color: var(--warning-color);
+            font-weight: 600;
+        }
+        
+        .service-badge .reviews {
+            color: var(--text-light);
+            font-size: var(--text-sm);
+        }
+        
+        .service-title {
+            font-size: var(--text-xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .service-description {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-lg);
+            min-height: 60px;
+        }
+        
+        .service-features {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .service-features .feature {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--text-sm);
+        }
+        
+        .service-features .feature i {
+            color: var(--success-color);
+        }
+        
+        .service-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .service-price {
+            display: flex;
+            align-items: baseline;
+            gap: var(--spacing-sm);
+        }
+        
+        .current-price {
+            font-size: var(--text-2xl);
+            font-weight: 800;
+            color: var(--dark-color);
+        }
+        
+        .original-price {
+            font-size: var(--text-lg);
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+        
+        .discount {
+            background: var(--success-color);
+            color: var(--white);
+            padding: 2px 8px;
+            border-radius: var(--radius-sm);
+            font-size: var(--text-sm);
+            font-weight: 600;
+        }
+        
+        .service-delivery {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-light);
+        }
+        
+        .service-btn {
+            width: 100%;
+        }
+        
+        .how-it-works {
+            padding: var(--spacing-3xl) 0;
+            background: var(--bg-light);
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-2xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .step-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: var(--text-lg);
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--spacing-lg);
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-3xl);
+            color: var(--white);
+        }
+        
+        .step-title {
+            margin-bottom: var(--spacing-md);
+            font-size: var(--text-xl);
+        }
+        
+        .step-description {
+            color: var(--text-light);
+        }
+        
+        .faq-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--bg-white);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: var(--spacing-2xl) auto 0;
+        }
+        
+        .faq-item {
+            margin-bottom: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: var(--spacing-lg);
+            background: var(--bg-light);
+            border: none;
+            text-align: left;
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--dark-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-fast);
+        }
+        
+        .faq-question:hover {
+            background: var(--border-color);
+        }
+        
+        .faq-question i {
+            transition: transform var(--transition-fast);
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 var(--spacing-lg);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-fast);
+        }
+        
+        .faq-answer.show {
+            padding: var(--spacing-lg);
+            max-height: 500px;
+        }
+        
+        .services-cta {
+            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .services-cta h2 {
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .services-cta p {
+            font-size: var(--text-xl);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-xl);
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Service Detail Modal */
+        .modal-lg {
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .service-detail {
+            padding: var(--spacing-lg);
+        }
+        
+        .detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .detail-title h2 {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .detail-badges {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+        
+        .detail-badges .badge {
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+        }
+        
+        .badge.popular {
+            background: var(--gradient-secondary);
+            color: var(--white);
+        }
+        
+        .badge.category {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        
+        .badge.rating {
+            background: var(--warning-color);
+            color: var(--white);
+        }
+        
+        .detail-price {
+            text-align: right;
+        }
+        
+        .price-main {
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .price-original {
+            font-size: var(--text-lg);
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .price-discount {
+            background: var(--success-color);
+            color: var(--white);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-sm);
+            font-weight: 600;
+        }
+        
+        .detail-content > div {
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .detail-content h3 {
+            margin-bottom: var(--spacing-lg);
+            color: var(--primary-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .feature-item i {
+            color: var(--success-color);
+        }
+        
+        .detail-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            background: var(--bg-light);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+        }
+        
+        .info-item h4 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+            color: var(--dark-color);
+        }
+        
+        .info-item p {
+            margin: 0;
+            color: var(--text-light);
+        }
+        
+        .detail-faq .faq-items {
+            margin-top: var(--spacing-lg);
+        }
+        
+        .detail-faq .faq-item {
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .detail-faq .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .detail-faq h4 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--dark-color);
+        }
+        
+        .detail-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-2xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        @media (max-width: 768px) {
+            .detail-header {
+                flex-direction: column;
+                gap: var(--spacing-lg);
+            }
+            
+            .detail-price {
+                text-align: left;
+                width: 100%;
+            }
+            
+            .detail-actions {
+                flex-direction: column;
+            }
+            
+            .detail-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</body>
+</html>

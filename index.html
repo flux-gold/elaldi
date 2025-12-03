@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elaldi - Pazarlama Danışmanlığı, Mikro Hizmetler ve SaaS Çözümleri</title>
+    <meta name="description" content="Pazarlama danışmanlığı, mikro hizmet pazarı ve SaaS araçları için tek platform. Paket rezervasyonu yapın, hizmet satın alın, abonelik başlatın.">
+    <meta name="keywords" content="pazarlama danışmanlığı, mikro hizmet, SaaS, abonelik, EFT ödeme, Hüseyin Elaldi">
+    <meta name="author" content="Hüseyin Elaldi">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flux-gold.github.io/elaldi/">
+    <meta property="og:title" content="Elaldi - Pazarlama Danışmanlığı, Mikro Hizmetler ve SaaS Çözümleri">
+    <meta property="og:description" content="Pazarlama danışmanlığı, mikro hizmet pazarı ve SaaS araçları için tek platform.">
+    <meta property="og:image" content="https://flux-gold.github.io/elaldi/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://flux-gold.github.io/elaldi/">
+    <meta property="twitter:title" content="Elaldi - Pazarlama Danışmanlığı, Mikro Hizmetler ve SaaS Çözümleri">
+    <meta property="twitter:description" content="Pazarlama danışmanlığı, mikro hizmet pazarı ve SaaS araçları için tek platform.">
+    <meta property="twitter:image" content="https://flux-gold.github.io/elaldi/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Scripts (defer) -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <span class="logo-text">Elaldi</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Ana Sayfa</a></li>
+                    <li><a href="#services" class="nav-link">Hizmetler</a></li>
+                    <li><a href="#saas" class="nav-link">SaaS Araçları</a></li>
+                    <li><a href="#pricing" class="nav-link">Fiyatlandırma</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">İletişim</a></li>
+                </ul>
+                
+                <!-- User Actions -->
+                <div class="nav-actions">
+                    <button class="btn btn-outline" id="theme-toggle" aria-label="Dark/Light mode değiştir">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="btn btn-primary" id="login-btn">Giriş Yap</button>
+                    <div class="mobile-toggle" id="mobile-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Pazarlama Danışmanlığı, <span class="highlight">Mikro Hizmetler</span> ve <span class="highlight">SaaS</span> Çözümleri</h1>
+                <p class="hero-subtitle">Tek platform üzerinden ihtiyacınız olan tüm pazarlama çözümlerine erişin. Paket rezervasyonu yapın, mikro hizmet satın alın, SaaS aboneliği başlatın.</p>
+                <div class="hero-cta">
+                    <a href="#pricing" class="btn btn-primary btn-large">Danışmanlık Al</a>
+                    <a href="#services" class="btn btn-outline btn-large">Hizmetleri Gör</a>
+                    <a href="#saas" class="btn btn-outline btn-large">Araçları Deneyin</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-illustration.svg" alt="Pazarlama Danışmanlığı ve SaaS Çözümleri" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popüler Mikro Hizmetler</h2>
+                <p class="section-subtitle">İhtiyacınıza özel, hızlı ve etkili pazarlama hizmetleri</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">SEO Analiz</h3>
+                    <p class="service-description">Web sitenizin SEO performansını detaylı analiz edip iyileştirme önerileri sunuyoruz.</p>
+                    <div class="service-price">₺499<span>/tek seferlik</span></div>
+                    <button class="btn btn-outline service-btn">Hemen Al</button>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="service-title">Sosyal Medya Stratejisi</h3>
+                    <p class="service-description">Markanız için etkili sosyal medya stratejisi ve içerik planı oluşturuyoruz.</p>
+                    <div class="service-price">₺799<span>/tek seferlik</span></div>
+                    <button class="btn btn-outline service-btn">Hemen Al</button>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3 class="service-title">Google Ads Optimizasyon</h3>
+                    <p class="service-description">Google Ads kampanyalarınızı optimize ederek daha fazla dönüşüm elde edin.</p>
+                    <div class="service-price">₺1,199<span>/tek seferlik</span></div>
+                    <button class="btn btn-outline service-btn">Hemen Al</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SaaS Tools Section -->
+    <section class="saas" id="saas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">SaaS Araçları</h2>
+                <p class="section-subtitle">Abonelik tabanlı pazarlama araçları ile süreçlerinizi otomatikleştirin</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Plan 1 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Starter</h3>
+                        <div class="plan-price">₺299<span>/ay</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Temel analiz araçları</li>
+                        <li><i class="fas fa-check"></i> 5 rapor oluşturma</li>
+                        <li><i class="fas fa-check"></i> Email desteği</li>
+                        <li><i class="fas fa-times"></i> Özel danışmanlık</li>
+                        <li><i class="fas fa-times"></i> API erişimi</li>
+                    </ul>
+                    <button class="btn btn-outline plan-btn">Başla</button>
+                </div>
+                
+                <!-- Plan 2 (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Popüler</div>
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Professional</h3>
+                        <div class="plan-price">₺699<span>/ay</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Tüm Starter özellikleri</li>
+                        <li><i class="fas fa-check"></i> Sınırsız rapor</li>
+                        <li><i class="fas fa-check"></i> Öncelikli destek</li>
+                        <li><i class="fas fa-check"></i> Haftalık danışmanlık</li>
+                        <li><i class="fas fa-times"></i> Gelişmiş API</li>
+                    </ul>
+                    <button class="btn btn-primary plan-btn">Başla</button>
+                </div>
+                
+                <!-- Plan 3 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Business</h3>
+                        <div class="plan-price">₺1,499<span>/ay</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Tüm Professional özellikleri</li>
+                        <li><i class="fas fa-check"></i> Özel dashboard</li>
+                        <li><i class="fas fa-check"></i> 7/24 telefon desteği</li>
+                        <li><i class="fas fa-check"></i> Tam API erişimi</li>
+                        <li><i class="fas fa-check"></i> Özel entegrasyon</li>
+                    </ul>
+                    <button class="btn btn-outline plan-btn">Başla</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Müşteri Yorumları</h2>
+                <p class="section-subtitle">Binlerce müşterimizin deneyimleri</p>
+            </div>
+            <div class="testimonial-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"SEO analiz hizmeti sayesinde organik trafiğim %40 arttı. Kesinlikle tavsiye ederim!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="images/avatar1.jpg" alt="Ahmet Yılmaz" loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <h4>Ahmet Yılmaz</h4>
+                            <p>E-ticaret Girişimcisi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Professional plan ile pazarlama süreçlerimizi tamamen otomatikleştirdik. Harika bir ROI!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="images/avatar2.jpg" alt="Zeynep Kaya" loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <h4>Zeynep Kaya</h4>
+                            <p>Dijital Ajans Sahibi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Elaldi</h3>
+                    <p class="footer-description">Pazarlama danışmanlığı, mikro hizmetler ve SaaS çözümlerinde lider platform.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/huseyinelaldi7" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/905421239770" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:huseyinelald1@icloud.com" aria-label="E-posta">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Ana Sayfa</a></li>
+                        <li><a href="#services">Hizmetler</a></li>
+                        <li><a href="#saas">SaaS Araçları</a></li>
+                        <li><a href="#pricing">Fiyatlandırma</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">İletişim</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+905421239770">+90 542 123 9770</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:huseyinelald1@icloud.com">huseyinelald1@icloud.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://instagram.com/huseyinelaldi7" target="_blank">@huseyinelaldi7</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Bülten Aboneliği</h4>
+                    <p>En yeni hizmetler ve kampanyalardan haberdar olun.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="E-posta adresiniz" required>
+                        <button type="submit" class="btn btn-primary">Abone Ol</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Elaldi. Tüm hakları saklıdır.</p>
+                <p>Ödemeler: EFT/Havale - Onay Admin (Hüseyin) tarafından yapılacaktır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <div class="container">
+            <p>Hemen başlayın! <span>Özel indirim kodu: ELALDI10</span></p>
+            <a href="#pricing" class="btn btn-primary">Plan Seç</a>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Giriş Yap</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">E-posta</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+            </form>
+            <p class="modal-footer-text">Hesabınız yok mu? <a href="#" id="register-link">Kayıt Olun</a></p>
+        </div>
+    </div>
+</body>
+</html>

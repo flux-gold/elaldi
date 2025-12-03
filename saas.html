@@ -1,0 +1,131 @@
+<!-- saas.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GoldFlux - Profesyonel SaaS Araçları ve Pazarlama Çözümleri">
+    <title>SaaS Araçları | GoldFlux</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body class="saas-page">
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="GoldFlux Logo" width="120" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Ana Sayfa</a>
+                <a href="services.html">Hizmetler</a>
+                <a href="saas.html" class="active">SaaS Araçları</a>
+                <a href="blog.html">Blog</a>
+                <a href="dashboard.html">Panelim</a>
+                <a href="contact.html" class="btn-outline">İletişim</a>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero-saas">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-fade-in">Profesyonel SaaS Araçları</h1>
+                <p class="subtitle">Pazarlama otomasyonundan analize, ihtiyacınız olan tüm araçlar tek platformda</p>
+                <div class="cta-buttons">
+                    <a href="#plans" class="btn-primary">Planları Gör</a>
+                    <a href="#demo" class="btn-secondary">Demo Talep Et</a>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <img src="../images/hero-illustration.svg" alt="SaaS Araçları" class="animate-float">
+            </div>
+        </div>
+    </section>
+
+    <section class="saas-features">
+        <div class="container">
+            <h2 class="section-title">Öne Çıkan Özellikler</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up"><div class="feature-icon">📊</div><h3>Gerçek Zamanlı Analiz</h3><p>Canlı veri takibi ve detaylı raporlama sistemi</p></div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100"><div class="feature-icon">🤖</div><h3>AI Destekli Optimizasyon</h3><p>Yapay zeka ile kampanya optimizasyonu</p></div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200"><div class="feature-icon">📱</div><h3>Çoklu Platform</h3><p>Mobil, tablet ve masaüstü uyumlu arayüz</p></div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300"><div class="feature-icon">🔄</div><h3>Otomatik Senkronizasyon</h3><p>Tüm platformlar arası veri senkronizasyonu</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-plans" id="plans">
+        <div class="container">
+            <h2 class="section-title">Abonelik Planları</h2>
+            <div class="plans-container">
+                <div class="plan-card basic">
+                    <div class="plan-header"><h3>Starter</h3><div class="price">₺499<span>/ay</span></div><p>Başlangıç seviyesi için ideal</p></div>
+                    <ul class="plan-features"><li>✓ 5 Proje Limiti</li><li>✓ Temel Analitik</li><li>✓ Email Destek</li><li>✓ 1GB Depolama</li><li>✗ AI Özellikleri</li><li>✗ Özel Entegrasyon</li></ul>
+                    <a href="../payment/checkout.html?plan=starter" class="btn-plan">Başla</a>
+                </div>
+
+                <div class="plan-card pro popular">
+                    <div class="plan-badge">Popüler</div>
+                    <div class="plan-header"><h3>Professional</h3><div class="price">₺999<span>/ay</span></div><p>Profesyonel kullanıcılar için</p></div>
+                    <ul class="plan-features"><li>✓ 20 Proje Limiti</li><li>✓ Gelişmiş Analitik</li><li>✓ Öncelikli Destek</li><li>✓ 10GB Depolama</li><li>✓ Sınırlı AI Özellikleri</li><li>✓ API Erişimi</li></ul>
+                    <a href="../payment/checkout.html?plan=pro" class="btn-plan">Başla</a>
+                </div>
+
+                <div class="plan-card business">
+                    <div class="plan-header"><h3>Business</h3><div class="price">₺1,999<span>/ay</span></div><p>Kurumsal çözümler</p></div>
+                    <ul class="plan-features"><li>✓ Sınırsız Proje</li><li>✓ Kurumsal Analitik</li><li>✓ 7/24 Destek</li><li>✓ 100GB Depolama</li><li>✓ Tüm AI Özellikleri</li><li>✓ Özel Entegrasyon</li></ul>
+                    <a href="../payment/checkout.html?plan=business" class="btn-plan">İletişime Geç</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="demo-content">
+                <h2>Demo Talep Edin</h2>
+                <p>Platformumuzu ücretsiz deneyin, 14 gün boyunca tüm özellikleri test edin</p>
+                <form class="demo-form" id="demoForm">
+                    <input type="email" placeholder="E-posta adresiniz" required>
+                    <input type="text" placeholder="Şirket Adı">
+                    <select required><option value="">İlgilendiğiniz Plan</option><option value="starter">Starter</option><option value="pro">Professional</option><option value="business">Business</option></select>
+                    <button type="submit" class="btn-primary">Demo Talep Et</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../images/logo.png" alt="Logo" class="footer-logo">
+                    <p>GoldFlux Pazarlama - Danışmanlık, mikro hizmetler ve SaaS çözümleri</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <a href="../index.html">Ana Sayfa</a>
+                    <a href="services.html">Hizmetler</a>
+                    <a href="saas.html">SaaS Araçları</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <p>📧 goldflux@email.com</p>
+                    <p>📱 +90 542 123 9770</p>
+                    <p>📷 @goldflux</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 GoldFlux. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

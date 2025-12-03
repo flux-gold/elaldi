@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    
+    <!-- Ana Sayfa -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://flux-gold.github.io/elaldi/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://flux-gold.github.io/elaldi/en/" />
+    </url>
+    
+    <!-- Hizmetler -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/services.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- SaaS Araçları -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/saas.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Fiyatlandırma -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/pricing.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Blog Ana Sayfa -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/blog.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- İletişim -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/contact.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Giriş Yap -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/login.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Kayıt Ol -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/register.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Blog Yazıları (Örnek) -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/blog/2024-dijital-pazarlama-trendleri.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://flux-gold.github.io/elaldi/images/blog/dijital-pazarlama-trendleri.jpg</image:loc>
+            <image:title>2024 Dijital Pazarlama Trendleri</image:title>
+            <image:caption>2024 yılında dijital pazarlamada öne çıkacak trendler ve stratejiler</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/blog/seo-stratejileri-2024.html</loc>
+        <lastmod>2024-01-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Hizmet Detay Sayfaları -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/service/seo-analiz.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/service/sosyal-medya-stratejisi.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/service/google-ads-optimizasyon.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- SaaS Planları -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/plan/starter.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/plan/professional.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/plan/business.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Yardım Sayfaları -->
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/help.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/faq.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/privacy.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://flux-gold.github.io/elaldi/terms.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+</urlset>

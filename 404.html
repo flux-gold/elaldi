@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa Bulunamadı - Elaldi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="error-page">
+        <div class="container">
+            <div class="error-content">
+                <h1>404</h1>
+                <h2>Sayfa Bulunamadı</h2>
+                <p>Aradığınız sayfa taşınmış veya kaldırılmış olabilir.</p>
+                <div class="error-actions">
+                    <a href="/" class="btn btn-primary">Ana Sayfaya Dön</a>
+                    <a href="/contact" class="btn btn-outline">İletişime Geç</a>
+                </div>
+                <div class="error-search">
+                    <input type="text" placeholder="Site içinde ara...">
+                    <button class="btn btn-primary">Ara</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .error-content {
+            text-align: center;
+            padding: 60px 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .error-content h1 {
+            font-size: 120px;
+            color: #4361ee;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        
+        .error-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .error-content p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .error-search {
+            display: flex;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .error-search input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px 0 0 8px;
+            font-size: 16px;
+        }
+        
+        .error-search button {
+            border-radius: 0 8px 8px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .error-content h1 {
+                font-size: 80px;
+            }
+            
+            .error-content h2 {
+                font-size: 28px;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+            }
+            
+            .error-search {
+                flex-direction: column;
+            }
+            
+            .error-search input {
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+            
+            .error-search button {
+                border-radius: 8px;
+                width: 100%;
+            }
+        }
+    </style>
+</body>
+</html>

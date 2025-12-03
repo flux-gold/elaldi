@@ -1,0 +1,132 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "2025'te SEO Trendleri: AI ve Sesli Arama",
+      "excerpt": "Yapay zeka ve sesli arama teknolojilerinin SEO stratejilerinizi nasıl değiştireceğini keşfedin.",
+      "content": "Detaylı içerik burada yer alacak...",
+      "author": "Hüseyin Elaldi",
+      "date": "2024-12-15",
+      "readTime": 8,
+      "category": "seo",
+      "tags": ["seo", "ai", "voice-search", "trends"],
+      "image": "../images/blog/seo-trends.jpg",
+      "featured": true,
+      "views": 1245,
+      "comments": 23
+    },
+    {
+      "id": 2,
+      "title": "SaaS Abonelik Modelleri: Hangi Plan Sizin İçin?",
+      "excerpt": "Starter, Pro ve Business planlar arasındaki farkları ve hangisinin işinize uygun olduğunu öğrenin.",
+      "content": "Detaylı içerik burada yer alacak...",
+      "author": "Hüseyin Elaldi",
+      "date": "2024-12-10",
+      "readTime": 6,
+      "category": "saas",
+      "tags": ["saas", "pricing", "subscription", "business"],
+      "image": "../images/blog/saas-plans.jpg",
+      "featured": true,
+      "views": 892,
+      "comments": 15
+    },
+    {
+      "id": 3,
+      "title": "Sosyal Medya Pazarlamasında 10 Kritik Hata",
+      "excerpt": "İşletmelerin sosyal medyada yaptığı en yaygın hatalar ve bunlardan nasıl kaçınacağınız.",
+      "content": "Detaylı içerik burada yer alacak...",
+      "author": "Hüseyin Elaldi",
+      "date": "2024-12-05",
+      "readTime": 10,
+      "category": "social",
+      "tags": ["social-media", "marketing", "mistakes", "strategy"],
+      "image": "../images/blog/social-mistakes.jpg",
+      "featured": false,
+      "views": 1567,
+      "comments": 42
+    },
+    {
+      "id": 4,
+      "title": "Google Analytics 4 ile Derinlemesine Analiz",
+      "excerpt": "GA4'ün yeni özelliklerini kullanarak müşteri davranışlarını nasıl analiz edeceğinizi öğrenin.",
+      "content": "Detaylı içerik burada yer alacak...",
+      "author": "Hüseyin Elaldi",
+      "date": "2024-12-01",
+      "readTime": 12,
+      "category": "analytics",
+      "tags": ["analytics", "ga4", "data", "tracking"],
+      "image": "../images/blog/ga4-guide.jpg",
+      "featured": true,
+      "views": 1034,
+      "comments": 18
+    },
+    {
+      "id": 5,
+      "title": "Mikro Hizet Pazarı: Neden Geleceğin Modeli?",
+      "excerpt": "Tek seferlik uzmanlık hizmetlerinin işinizi nasıl büyütebileceğini keşfedin.",
+      "content": "Detaylı içerik burada yer alacak...",
+      "author": "Hüseyin Elaldi",
+      "date": "2024-11-25",
+      "readTime": 7,
+      "category": "marketing",
+      "tags": ["micro-services", "freelance", "expertise", "growth"],
+      "image": "../images/blog/micro-services.jpg",
+      "featured": false,
+      "views": 756,
+      "comments": 9
+    },
+    {
+      "id": 6,
+      "title": "AI ile Pazarlama Otomasyonu: Başlangıç Rehberi",
+      "excerpt": "Yapay zeka araçlarını kullanarak pazarlama süreçlerinizi nasıl otomatize edeceğinizi öğrenin.",
+      "content": "Detaylı içerik burada yer alacak...",
+      "author": "Hüseyin Elaldi",
+      "date": "2024-11-20",
+      "readTime": 15,
+      "category": "marketing",
+      "tags": ["ai", "automation", "marketing", "tools"],
+      "image": "../images/blog/ai-marketing.jpg",
+      "featured": true,
+      "views": 1890,
+      "comments": 31
+    }
+  ],
+  "categories": [
+    {
+      "id": "marketing",
+      "name": "Pazarlama",
+      "count": 24,
+      "description": "Pazarlama stratejileri ve trendleri"
+    },
+    {
+      "id": "saas",
+      "name": "SaaS",
+      "count": 18,
+      "description": "SaaS araçları ve abonelik modelleri"
+    },
+    {
+      "id": "seo",
+      "name": "SEO",
+      "count": 32,
+      "description": "Arama motoru optimizasyonu"
+    },
+    {
+      "id": "social",
+      "name": "Sosyal Medya",
+      "count": 21,
+      "description": "Sosyal medya pazarlaması"
+    },
+    {
+      "id": "analytics",
+      "name": "Analitik",
+      "count": 15,
+      "description": "Veri analizi ve metrikler"
+    }
+  ],
+  "meta": {
+    "totalPosts": 112,
+    "lastUpdated": "2024-12-15",
+    "authors": ["Hüseyin Elaldi"],
+    "monthlyVisitors": 12500
+  }
+}

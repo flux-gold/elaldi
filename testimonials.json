@@ -1,0 +1,70 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Ahmet Yılmaz",
+      "company": "TechStart Inc.",
+      "avatar": "../images/avatars/avatar1.jpg",
+      "rating": 5,
+      "comment": "Elaldi'nin SaaS araçları ile pazarlama otomasyonumuz %300 büyüdü. Özellikle AI destekli optimizasyon harika!",
+      "date": "2024-12-10",
+      "service": "SaaS Professional Plan"
+    },
+    {
+      "id": 2,
+      "name": "Ayşe Kaya",
+      "company": "ModaMarkt",
+      "avatar": "../images/avatars/avatar2.jpg",
+      "rating": 5,
+      "comment": "SEO danışmanlığı ve sosyal medya yönetimi hizmetlerinden çok memnun kaldık. Trafiğimiz 3 ayda 5 kat arttı.",
+      "date": "2024-12-05",
+      "service": "Premium Pazarlama Paketi"
+    },
+    {
+      "id": 3,
+      "name": "Mehmet Demir",
+      "company": "GlobalExport",
+      "avatar": "../images/avatars/avatar3.jpg",
+      "rating": 4,
+      "comment": "Mikro hizmet pazarından aldığımız Google Ads optimizasyonu ROI'mizi %40 artırdı. Kesinlikle tavsiye ederim.",
+      "date": "2024-11-28",
+      "service": "Google Ads Optimizasyonu"
+    },
+    {
+      "id": 4,
+      "name": "Zeynep Şahin",
+      "company": "EduTech Solutions",
+      "avatar": "../images/avatars/avatar4.jpg",
+      "rating": 5,
+      "comment": "Business plan ile tüm ekip olarak kullanıyoruz. Dashboard ve raporlama özellikleri mükemmel. Destek ekibi çok hızlı.",
+      "date": "2024-11-20",
+      "service": "SaaS Business Plan"
+    },
+    {
+      "id": 5,
+      "name": "Can Öztürk",
+      "company": "FoodExpress",
+      "avatar": "../images/avatars/avatar5.jpg",
+      "rating": 5,
+      "comment": "EFT ödeme ve admin onay sistemi çok güvenli. 2 saat içinde onaylanıp hizmetlerimiz aktif oldu. Teşekkürler!",
+      "date": "2024-11-15",
+      "service": "Starter Plan + SEO Paketi"
+    },
+    {
+      "id": 6,
+      "name": "Selin Arslan",
+      "company": "HealthTech",
+      "avatar": "../images/avatars/avatar6.jpg",
+      "rating": 4,
+      "comment": "Blog içerikleri ve pazarlama stratejileri ile organik trafiğimizi artırdık. AI öneri sistemi çok faydalı.",
+      "date": "2024-11-10",
+      "service": "Content Marketing"
+    }
+  ],
+  "stats": {
+    "averageRating": 4.8,
+    "totalTestimonials": 156,
+    "responseRate": "98%",
+    "responseTime": "2 saat"
+  }
+}

@@ -1,0 +1,929 @@
+/* ============================================
+   ELALDI - Responsive Tasarım
+   Mobil, Tablet ve Desktop Uyumluluğu
+   Version: 1.0.0
+   ============================================ */
+
+/* ===== XXL EKRANLAR (1400px ve üzeri) ===== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-title {
+        font-size: var(--text-6xl);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-2xl);
+    }
+}
+
+/* ===== XL EKRANLAR (1200px - 1399px) ===== */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: var(--text-5xl);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===== LARGE TABLET & SMALL DESKTOP (992px - 1199px) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero .container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero-title {
+        font-size: var(--text-4xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-lg);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    .service-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    .pricing-card.featured {
+        transform: scale(1.03);
+    }
+    
+    .testimonial-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== TABLET (768px - 991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: var(--spacing-xl);
+        box-shadow: var(--shadow-lg);
+        border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .mobile-toggle {
+        display: flex;
+    }
+    
+    /* Hero Section */
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-title {
+        font-size: var(--text-4xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-lg);
+    }
+    
+    .hero-cta {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        order: -1;
+    }
+    
+    .hero-image img {
+        max-width: 80%;
+    }
+    
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    .service-card {
+        padding: var(--spacing-xl);
+    }
+    
+    /* Pricing Section */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Testimonials */
+    .testimonial-slider {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+    
+    /* Sticky CTA */
+    .sticky-cta .container {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    /* Modal */
+    .modal-content {
+        margin: var(--spacing-lg);
+        width: calc(100% - var(--spacing-xl));
+    }
+    
+    /* Section Padding */
+    section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    h1 {
+        font-size: var(--text-4xl);
+    }
+    
+    h2 {
+        font-size: var(--text-3xl);
+    }
+    
+    h3 {
+        font-size: var(--text-2xl);
+    }
+}
+
+/* ===== MOBILE LANDSCAPE (576px - 767px) ===== */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: var(--spacing-xl);
+        box-shadow: var(--shadow-lg);
+        border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+        z-index: 1000;
+    }
+    
+    .mobile-toggle {
+        display: flex;
+    }
+    
+    .nav-actions {
+        gap: var(--spacing-sm);
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: calc(var(--spacing-3xl) * 1.5) 0 var(--spacing-2xl);
+    }
+    
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero-title {
+        font-size: var(--text-3xl);
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-base);
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .hero-image {
+        order: -1;
+    }
+    
+    .hero-image img {
+        max-width: 90%;
+    }
+    
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .service-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        font-size: var(--text-2xl);
+    }
+    
+    /* Pricing Section */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .pricing-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    /* Testimonials */
+    .testimonial-slider {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-xl);
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-contact li {
+        justify-content: center;
+    }
+    
+    .footer-links a {
+        display: block;
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+    
+    /* Sticky CTA */
+    .sticky-cta {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .sticky-cta .container {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .sticky-cta p {
+        font-size: var(--text-sm);
+    }
+    
+    .sticky-cta .btn {
+        width: 100%;
+        max-width: 200px;
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+    
+    /* Modal */
+    .modal-content {
+        margin: var(--spacing-md);
+        padding: var(--spacing-xl);
+        width: calc(100% - var(--spacing-lg));
+    }
+    
+    /* Section Headers */
+    .section-title {
+        font-size: var(--text-2xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    /* Typography */
+    h1 {
+        font-size: var(--text-3xl);
+    }
+    
+    h2 {
+        font-size: var(--text-2xl);
+    }
+    
+    h3 {
+        font-size: var(--text-xl);
+    }
+    
+    h4 {
+        font-size: var(--text-lg);
+    }
+    
+    /* Buttons */
+    .btn-large {
+        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: var(--text-base);
+    }
+    
+    /* Section Padding */
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* ===== MOBILE PORTRAIT (375px - 575px) ===== */
+@media (min-width: 375px) and (max-width: 575px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Navigation */
+    .logo-text {
+        font-size: var(--text-xl);
+    }
+    
+    .nav-actions {
+        gap: var(--spacing-xs);
+    }
+    
+    #theme-toggle,
+    #login-btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--text-sm);
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: calc(var(--spacing-2xl) * 2) 0 var(--spacing-xl);
+    }
+    
+    .hero-title {
+        font-size: var(--text-2xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    .hero-cta .btn {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--text-sm);
+    }
+    
+    /* Services & Pricing Cards */
+    .service-card,
+    .pricing-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .service-price,
+    .plan-price {
+        font-size: var(--text-2xl);
+    }
+    
+    /* Testimonials */
+    .testimonial-content {
+        font-size: var(--text-base);
+        padding-left: var(--spacing-md);
+    }
+    
+    .author-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    }
+    
+    .footer-bottom p {
+        font-size: var(--text-xs);
+    }
+    
+    /* Modal */
+    .modal-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .modal h2 {
+        font-size: var(--text-xl);
+    }
+    
+    /* Utility Classes */
+    .text-sm-mobile {
+        font-size: var(--text-sm) !important;
+    }
+    
+    .text-center-mobile {
+        text-align: center !important;
+    }
+    
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+/* ===== SMALL MOBILE (374px ve altı) ===== */
+@media (max-width: 374px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Navigation */
+    .navbar {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .logo-text {
+        font-size: var(--text-lg);
+    }
+    
+    .mobile-toggle {
+        padding: var(--spacing-xs);
+    }
+    
+    .mobile-toggle span {
+        width: 20px;
+    }
+    
+    /* Hero Section */
+    .hero-title {
+        font-size: var(--text-xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-sm);
+    }
+    
+    .hero-cta .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--text-sm);
+    }
+    
+    /* Cards */
+    .service-card,
+    .pricing-card,
+    .testimonial-card {
+        padding: var(--spacing-md);
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: var(--text-xl);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .service-title,
+    .plan-name {
+        font-size: var(--text-lg);
+    }
+    
+    .service-description {
+        font-size: var(--text-sm);
+        min-height: 60px;
+    }
+    
+    /* Pricing */
+    .pricing-badge {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: var(--text-xs);
+    }
+    
+    .plan-features li {
+        font-size: var(--text-sm);
+    }
+    
+    /* Footer */
+    .footer-title {
+        font-size: var(--text-xl);
+    }
+    
+    .footer-heading {
+        font-size: var(--text-base);
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--text-sm);
+    }
+    
+    /* Typography */
+    h1 {
+        font-size: var(--text-2xl);
+    }
+    
+    h2 {
+        font-size: var(--text-xl);
+    }
+    
+    h3 {
+        font-size: var(--text-lg);
+    }
+    
+    p {
+        font-size: var(--text-sm);
+    }
+}
+
+/* ===== ORIENTATION SPECIFIC ===== */
+@media (max-height: 600px) and (orientation: landscape) {
+    /* Yatay modda yüksekliği az olan cihazlar için */
+    .hero {
+        padding: var(--spacing-2xl) 0;
+        min-height: auto;
+    }
+    
+    .hero .container {
+        gap: var(--spacing-lg);
+    }
+    
+    .hero-title {
+        font-size: var(--text-2xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-sm);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-cta .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--text-sm);
+    }
+    
+    .header {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* ===== HIGH DPI / RETINA DISPLAYS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Retina ekranlar için optimize edilmiş görseller */
+    .hero-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+    
+    .service-icon,
+    .social-links a {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}
+
+/* ===== REDUCED MOTION PREFERENCE ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-image img {
+        animation: none !important;
+    }
+    
+    .service-card:hover,
+    .pricing-card:hover,
+    .testimonial-card:hover {
+        transform: none !important;
+    }
+    
+    .btn:hover {
+        transform: none !important;
+    }
+    
+    .modal-content {
+        animation: none !important;
+    }
+    
+    .notification {
+        transition: none !important;
+    }
+}
+
+/* ===== DARK MODE MEDIA QUERY ===== */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --dark-color: #f1f5f9;
+        --text-color: #e2e8f0;
+        --text-light: #94a3b8;
+        --light-color: #1e293b;
+        --white: #0f172a;
+        --border-color: #334155;
+        
+        --bg-light: #0f172a;
+        --bg-white: #1e293b;
+        --bg-dark: #f8fafc;
+        --bg-card: #1e293b;
+    }
+    
+    body:not(.dark-mode) {
+        color-scheme: dark;
+    }
+}
+
+/* ===== PRINT STYLES ENHANCED ===== */
+@media print {
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    a {
+        color: #000 !important;
+        text-decoration: underline !important;
+    }
+    
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+    
+    .btn,
+    .hero-cta,
+    .nav-actions,
+    .social-links,
+    .newsletter-form,
+    .sticky-cta {
+        display: none !important;
+    }
+    
+    .service-card,
+    .pricing-card,
+    .testimonial-card {
+        break-inside: avoid;
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+        margin-bottom: 20pt !important;
+    }
+    
+    .service-icon,
+    .pricing-badge,
+    .author-avatar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    @page {
+        margin: 2cm;
+    }
+    
+    @page :first {
+        margin-top: 3cm;
+    }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+    /* Touch cihazlar için hover efektlerini iptal et */
+    .service-card:hover,
+    .pricing-card:hover,
+    .testimonial-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-md);
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .nav-link:hover {
+        background-color: transparent;
+    }
+    
+    /* Touch cihazlar için daha büyük tıklama alanları */
+    .nav-link,
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .mobile-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Scroll animasyonlarını optimize et */
+    .service-card,
+    .pricing-card,
+    .testimonial-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ===== FOLDABLE DEVICES ===== */
+@media (max-width: 280px) {
+    /* Katlanabilir cihazlar için */
+    .container {
+        padding: 0 var(--spacing-xs);
+    }
+    
+    .hero-title {
+        font-size: var(--text-lg);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-xs);
+    }
+    
+    .btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--text-xs);
+    }
+}
+
+/* ===== LARGE SCREENS WITH HIGH ZOOM ===== */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    .hero-title {
+        font-size: var(--text-6xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-2xl);
+    }
+    
+    .section-title {
+        font-size: var(--text-5xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--text-xl);
+    }
+    
+    p, li, .btn, input, textarea {
+        font-size: var(--text-lg);
+    }
+    
+    .services-grid,
+    .pricing-grid {
+        gap: var(--spacing-3xl);
+    }
+    
+    .service-card,
+    .pricing-card {
+        padding: var(--spacing-3xl);
+    }
+}
+
+/* ===== ACCESSIBILITY: FONT SIZE INCREASE ===== */
+@media (min-width: 768px) {
+    .text-size-large {
+        font-size: 1.25em !important;
+        line-height: 1.8 !important;
+    }
+    
+    .text-size-xlarge {
+        font-size: 1.5em !important;
+        line-height: 2 !important;
+    }
+    
+    .text-size-xxlarge {
+        font-size: 2em !important;
+        line-height: 2.2 !important;
+    }
+}
